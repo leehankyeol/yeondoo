@@ -4,6 +4,9 @@
 <!-- Map -->
 <script src="https://maps.googleapis.com/maps/api/js?v=3.exp"></script>
 <script>
+var marker;
+var map;
+
 function initialize() {
 	var yeondooLatlng = new google.maps.LatLng(37.5793285, 126.9824502);
 
@@ -12,15 +15,27 @@ function initialize() {
 		center: yeondooLatlng
 	};
 
-	var map = new google.maps.Map(document.getElementById('map-canvas'),
+	map = new google.maps.Map(document.getElementById('map-canvas'),
 		mapOptions);
 
-	var marker = new google.maps.Marker({
+	marker = new google.maps.Marker({
 			position: yeondooLatlng,
 			map: map,
-			title: 'Hello World!'
+			title: 'Yeondoo',
+			animation: google.maps.Animation.DROP,
 	});
+
+	google.maps.event.addListener(marker, 'click', toggleBounce);
 }
+
+function toggleBounce() {
+	if (marker.getAnimation() != null) {
+		marker.setAnimation(null);
+	} else {
+		marker.setAnimation(google.maps.Animation.BOUNCE);
+	}
+}
+
 google.maps.event.addDomListener(window, 'load', initialize);
 </script>
 <div>Map</div>
@@ -28,6 +43,30 @@ google.maps.event.addDomListener(window, 'load', initialize);
 
 <!-- Menu -->
 <div>Menu</div>
+<ol>
+	<li>Drip coffee
+		<ul>
+			<li>Brazil</li>
+			<li>Honduras</li>
+		</ul>
+	</li>
+
+	<li>Dessert
+		<ul>
+			<li>Cake</li>
+			<li>Bagle</li>
+		</ul>
+	</li>
+</ol>
 
 <!-- General info -->
 <div>General info</div>
+<ul>
+	<li>Hours
+		<p>10:00 - 22:00</p>
+	</li>
+
+	<li>Address
+		<p>Seoul</p>
+	</li>
+</ul>
