@@ -1,5 +1,9 @@
-<h1>Welcome to Yeondoo</h1>
-<h2>The base cafe in Samcheong-dong area</h2>
+<header class="header"><%= image_tag("logo.png", class: "logo-image") %></header>
+
+<section>
+	<p class="<%= @isOpen? "open": "closed" %>">Hours: <%= @isOpen? "Open": "Closed" %></p>
+	<p><%= @openHour.strftime("%H") %> - <%= @closeHour.strftime("%H") %></p>
+</section>
 
 <!-- Map -->
 <script src="https://maps.googleapis.com/maps/api/js?v=3.exp"></script>
@@ -38,35 +42,4 @@ function toggleBounce() {
 
 google.maps.event.addDomListener(window, 'load', initialize);
 </script>
-<div>Map</div>
 <div id="map-canvas"></div>
-
-<!-- Menu -->
-<div>Menu</div>
-<ol>
-	<li>Drip coffee
-		<ul>
-			<li>Brazil</li>
-			<li>Honduras</li>
-		</ul>
-	</li>
-
-	<li>Dessert
-		<ul>
-			<li>Cake</li>
-			<li>Bagle</li>
-		</ul>
-	</li>
-</ol>
-
-<!-- General info -->
-<div>General info</div>
-<ul>
-	<li>Hours
-		<p>10:00 - 22:00</p>
-	</li>
-
-	<li>Address
-		<p>Seoul</p>
-	</li>
-</ul>

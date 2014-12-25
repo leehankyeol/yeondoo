@@ -2,6 +2,33 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+body {
+	background-color: #f9f3e8;
+}
+
+header {
+	text-align: center;
+	padding: 10px 0;
+
+	.logo-image {
+		width: 100px;
+	}
+}
+
+section {
+	text-align: center;
+	padding: 10px;
+	background-color: #594031;
+	color: #fff;
+
+	.open {
+		color: #0f0;
+	}
+
+	.closed {
+		color: #f00;
+	}
+}
 
 #map-canvas {
 	width: 100%;
