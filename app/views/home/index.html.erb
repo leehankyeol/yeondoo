@@ -1,8 +1,8 @@
 <header class="header"><%= image_tag("logo.png", class: "logo-image") %></header>
 
 <section>
-	<p class="<%= @isOpen? "open": "closed" %>">Hours: <%= @isOpen? "Open": "Closed" %></p>
-	<p><%= @openHour.strftime("%H") %> - <%= @closeHour.strftime("%H") %></p>
+	<p>Cafe Yeondoo is now <span class="<%= @isOpen? "open": "closed" %>"><%= @isOpen? "Open": "Closed" %></span></p>
+	<p>Today's Hours: <%= @openHour.strftime("%H : %M") %> - <%= @closeHour.strftime("%H : %M") %></p>
 </section>
 
 <!-- Map -->
@@ -43,3 +43,5 @@ function toggleBounce() {
 google.maps.event.addDomListener(window, 'load', initialize);
 </script>
 <div id="map-canvas"></div>
+
+<div class="fb-like-box-wrapper"><div class="fb-like-box" data-href="https://www.facebook.com/ydcoffee" data-colorscheme="light" data-show-faces="true" data-header="false" data-stream="true" data-show-border="false" data-width="320"></div></div>

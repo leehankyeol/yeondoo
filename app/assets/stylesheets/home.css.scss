@@ -2,11 +2,8 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-body {
-	background-color: #f9f3e8;
-}
-
 header {
+	background-color: #f9f3e8;
 	text-align: center;
 	padding: 10px 0;
 
@@ -20,6 +17,7 @@ section {
 	padding: 10px;
 	background-color: #594031;
 	color: #fff;
+	line-height: 1.5em;
 
 	.open {
 		color: #0f0;
@@ -36,4 +34,9 @@ section {
 	min-height: 300px;
 	margin: 0px;
 	padding: 0px
+}
+
+.fb-like-box-wrapper {
+	width: 320px;
+	margin: 20px auto 0;
 }
