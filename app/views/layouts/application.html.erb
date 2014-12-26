@@ -7,6 +7,7 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+<div id="fb-root"></div>
 <script>
   window.fbAsyncInit = function() {
     FB.init({
@@ -14,6 +15,15 @@
       xfbml      : true,
       version    : 'v2.2'
     });
+
+    FB.api(
+      "/coffeeyd/feed",
+      function (response) {
+        if (response && !response.error) {
+          console.log(response);
+        }
+      }
+    );
   };
 
   (function(d, s, id){
@@ -24,6 +34,8 @@
      fjs.parentNode.insertBefore(js, fjs);
    }(document, 'script', 'facebook-jssdk'));
 </script>
+
+<header class="header"><%= image_tag("logo.png", class: "logo-image", id: "logo-image") %></header>
 
 <%= yield %>
 

@@ -27,4 +27,7 @@ class HomeController < ApplicationController
 			@isOpen = false
 		end
 	end
+
+	def privacy
+	end
 end
