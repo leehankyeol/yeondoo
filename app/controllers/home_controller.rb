@@ -26,6 +26,9 @@ class HomeController < ApplicationController
 		else
 			@isOpen = false
 		end
+
+		quote_id = rand(Quote.count) + 1
+		@quote = Quote.first(:conditions => [ "id >= ?", quote_id])
 	end
 
 	def privacy
