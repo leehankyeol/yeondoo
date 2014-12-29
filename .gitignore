@@ -17,3 +17,6 @@
 
 # Ignore OSX dummy files
 *.DS_STORE
+
+# Ignore secrets.yml
+/config/secrets.yml

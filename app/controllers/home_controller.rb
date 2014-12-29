@@ -1,3 +1,4 @@
+require 'net/http'
 require 'time'
 
 class HomeController < ApplicationController
@@ -7,6 +8,13 @@ class HomeController < ApplicationController
 		@openHour = nil
 		@closeHour = nil
 		t = Time.zone.now
+
+		url = URI.parse('https://graph.facebook.com/v2.2/723968317690690?access_token='+Rails.application.secrets.facebook_page_token)
+		req = Net::HTTP::Get.new(url.to_s)
+		res = Net::HTTP.start(url.host, url.port) {|http|
+			http.request(req)
+		}
+		puts res.body
 
 		case t.strftime("%A")
 		when "Monday", "Tuesday", "Wednesday", "Thursday"
