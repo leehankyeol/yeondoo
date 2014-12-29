@@ -1,13 +1,3 @@
-<section class="quote">
-	<p class="content"><%= @quote.content %></p>
-	<p class="name">- <%= @quote.name %></p>
-</section>
-
-<section class="hours">
-	<p>Now <span class="<%= @isOpen? "open": "closed" %>"><%= @isOpen? "Open": "Closed" %></span></p>
-	<p>Today's Hours: <%= @openHour.strftime("%H : %M") %> - <%= @closeHour.strftime("%H : %M") %></p>
-</section>
-
 <!-- Map -->
 <script src="https://maps.googleapis.com/maps/api/js?v=3.exp"></script>
 <script>

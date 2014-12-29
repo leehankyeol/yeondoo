@@ -38,11 +38,20 @@
    }(document, 'script', 'facebook-jssdk'));
 </script>
 
-<header class="header"><%= image_tag("logo.png", class: "logo-image", id: "logo-image") %></header>
+<header class="header" style="background-image: url(<%= @yeondoo["cover"]["source"] %>);">
+  <%= image_tag("logo.png", class: "logo-image", id: "logo-image") %>
+  <div class="text">
+    <p>Now <span class="<%= @isOpen? "open": "closed" %>"><%= @isOpen? "Open": "Closed" %></span></p>
+    <p>Today's Hours: <%= @openHour.strftime("%H : %M") %> - <%= @closeHour.strftime("%H : %M") %></p>
+  </div>
+  <div class="background-opacity"></div>
+</header>
 
 <%= yield %>
 
 <footer>
+  <p class="content"><%= @quote.content %></p>
+  <p class="name">- <%= @quote.name %></p>
   <p>Copyright © 2014 by Yeondoo</p>
   <p><%= link_to('Facebook', 'https://fb.me/ydcoffee', target: '_blank') %> - <%= link_to('Github', 'https://github.com/leehankyeol/Yeondoo', target: '_blank') %></p>
 </footer>

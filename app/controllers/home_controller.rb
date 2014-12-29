@@ -9,13 +9,6 @@ class HomeController < ApplicationController
 		@closeHour = nil
 		t = Time.zone.now
 
-		url = URI.parse('https://graph.facebook.com/v2.2/723968317690690?access_token='+Rails.application.secrets.facebook_page_token)
-		req = Net::HTTP::Get.new(url.to_s)
-		res = Net::HTTP.start(url.host, url.port) {|http|
-			http.request(req)
-		}
-		puts res.body
-
 		case t.strftime("%A")
 		when "Monday", "Tuesday", "Wednesday", "Thursday"
 			@openHour = Time.zone.now.change(hour: 10)
@@ -34,9 +27,6 @@ class HomeController < ApplicationController
 		else
 			@isOpen = false
 		end
-
-		quote_id = rand(Quote.count) + 1
-		@quote = Quote.first(:conditions => [ "id >= ?", quote_id])
 	end
 
 	def privacy
