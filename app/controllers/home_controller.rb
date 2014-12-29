@@ -6,18 +6,18 @@ class HomeController < ApplicationController
 		@isOpen = nil
 		@openHour = nil
 		@closeHour = nil
-		t = Time.new()
+		t = Time.zone.now
 
 		case t.strftime("%A")
 		when "Monday", "Tuesday", "Wednesday", "Thursday"
-			@openHour = Time.new().change(hour: 10)
-			@closeHour = Time.new().change(hour: 22)
+			@openHour = Time.zone.now.change(hour: 10)
+			@closeHour = Time.zone.now.change(hour: 22)
 		when "Friday", "Saturday"
-			@openHour = Time.new().change(hour: 11)
-			@closeHour = Time.new().change(hour: 22, min: 30)
+			@openHour = Time.zone.now.change(hour: 11)
+			@closeHour = Time.zone.now.change(hour: 22, min: 30)
 		when "Sunday"
-			@openHour = Time.new().change(hour: 11)
-			@closeHour = Time.new().change(hour: 21)
+			@openHour = Time.zone.now.change(hour: 11)
+			@closeHour = Time.zone.now.change(hour: 21)
 		else
 		end
 
