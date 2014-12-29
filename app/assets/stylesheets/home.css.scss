@@ -7,6 +7,10 @@ body {
 	font-weight: 300;
 }
 
+a {
+	text-decoration: none;
+}
+
 header {
 	background-color: #f9f3e8;
 	text-align: center;
@@ -61,4 +65,17 @@ section.quote {
 .fb-like-box-wrapper {
 	width: 320px;
 	margin: 20px auto;
+}
+
+footer {
+	background-color: #000;
+	color: #fff;
+	font-size: 0.8em;
+	text-align: center;
+	padding: 10px;
+	line-height: 1.5em;
+
+	a {
+		color: #bbb
+	}
 }
