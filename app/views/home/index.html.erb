@@ -1,9 +1,11 @@
-<section>
-	<p>Cafe Yeondoo is now <span class="<%= @isOpen? "open": "closed" %>"><%= @isOpen? "Open": "Closed" %></span></p>
+<section class="quote">
+	<p class="content"><%= @quote.content %></p>
+	<p class="name">- <%= @quote.name %></p>
+</section>
+
+<section class="hours">
+	<p>Now <span class="<%= @isOpen? "open": "closed" %>"><%= @isOpen? "Open": "Closed" %></span></p>
 	<p>Today's Hours: <%= @openHour.strftime("%H : %M") %> - <%= @closeHour.strftime("%H : %M") %></p>
-	<p>Today's Quote</p>
-	<p><%= @quote.content %></p>
-	<p>- <%= @quote.name %></p>
 </section>
 
 <!-- Map -->
@@ -45,4 +47,4 @@ google.maps.event.addDomListener(window, 'load', initialize);
 </script>
 <div id="map-canvas"></div>
 
-<div class="fb-like-box-wrapper"><div class="fb-like-box" data-href="https://www.facebook.com/ydcoffee" data-colorscheme="light" data-show-faces="true" data-header="false" data-stream="true" data-show-border="false" data-width="320"></div></div>
+<div class="fb-like-box-wrapper"><div class="fb-like-box" data-href="https://www.facebook.com/ydcoffee" data-colorscheme="light" data-show-faces="false" data-header="false" data-stream="true" data-show-border="false" data-width="320"></div></div>

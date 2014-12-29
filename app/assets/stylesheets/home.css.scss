@@ -4,6 +4,7 @@
 
 body {
 	font-family: 'Lato', sans-serif;
+	font-weight: 300;
 }
 
 header {
@@ -12,11 +13,11 @@ header {
 	padding: 10px 0;
 
 	.logo-image {
-		width: 100px;
+		width: 130px;
 	}
 }
 
-section {
+section.hours {
 	text-align: center;
 	padding: 10px;
 	background-color: #594031;
@@ -32,6 +33,23 @@ section {
 	}
 }
 
+section.quote {
+	background-color: #f9f3e8;
+
+	.content {
+		font-style: italic;
+	}
+
+	.name {
+		font-size: 0.8em;
+	}
+	
+	text-align: center;
+	padding: 10px;
+	color: #000;
+	line-height: 1.5em;	
+}
+
 #map-canvas {
 	width: 100%;
 	height: 100%;
@@ -42,5 +60,5 @@ section {
 
 .fb-like-box-wrapper {
 	width: 320px;
-	margin: 20px auto 0;
+	margin: 20px auto;
 }
