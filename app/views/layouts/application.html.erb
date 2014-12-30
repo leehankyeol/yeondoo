@@ -1,14 +1,59 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Yeondoo</title>
+  <title>Cafe Yeondoo</title>
+  <meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
+  <link href='http://fonts.googleapis.com/css?family=Lato:300,400,700,300italic' rel='stylesheet' type='text/css'>
+  <%= favicon_link_tag 'favicon.png' %>
   <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
+<div id="fb-root"></div>
+<script>
+  window.fbAsyncInit = function() {
+    FB.init({
+      appId      : '841634859226833',
+      xfbml      : true,
+      version    : 'v2.2'
+    });
+
+    FB.api(
+      "/coffeeyd",
+      function (response) {
+        if (response && !response.error) {
+          console.log(response);
+        }
+      }
+    );
+  };
+
+  (function(d, s, id){
+     var js, fjs = d.getElementsByTagName(s)[0];
+     if (d.getElementById(id)) {return;}
+     js = d.createElement(s); js.id = id;
+     js.src = "//connect.facebook.net/en_US/sdk.js";
+     fjs.parentNode.insertBefore(js, fjs);
+   }(document, 'script', 'facebook-jssdk'));
+</script>
+
+<header class="header <%= @isOpen? 'isOpen': '' %>">
+  <%= image_tag("logo.png", class: "logo-image", id: "logo-image") %>
+  <div class="text">
+    <p>Now <span class="<%= @isOpen? "open": "closed" %>"><%= @isOpen? "Open": "Closed" %></span></p>
+    <p>Today's Hours: <%= @openHour.strftime("%H : %M") %> - <%= @closeHour.strftime("%H : %M") %></p>
+  </div>
+  <div class="background-opacity"></div>
+</header>
 
 <%= yield %>
 
+<footer>
+  <p class="content"><%= @quote.content %></p>
+  <p class="name">- <%= @quote.name %></p>
+  <p>Copyright © 2014 by Yeondoo</p>
+  <p><%= link_to('Facebook', 'https://fb.me/ydcoffee', target: '_blank') %> - <%= link_to('Github', 'https://github.com/leehankyeol/Yeondoo', target: '_blank') %></p>
+</footer>
 </body>
 </html>

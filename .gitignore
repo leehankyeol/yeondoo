@@ -14,3 +14,9 @@
 # Ignore all logfiles and tempfiles.
 /log/*.log
 /tmp
+
+# Ignore OSX dummy files
+*.DS_STORE
+
+# Ignore secrets.yml
+/config/secrets.yml
