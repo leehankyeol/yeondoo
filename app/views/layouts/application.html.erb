@@ -38,7 +38,7 @@
    }(document, 'script', 'facebook-jssdk'));
 </script>
 
-<header class="header" style="background-image: url(<%= @yeondoo["cover"]["source"] %>);">
+<header class="header <%= @isOpen? 'isOpen': '' %>">
   <%= image_tag("logo.png", class: "logo-image", id: "logo-image") %>
   <div class="text">
     <p>Now <span class="<%= @isOpen? "open": "closed" %>"><%= @isOpen? "Open": "Closed" %></span></p>

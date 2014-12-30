@@ -13,13 +13,17 @@ a {
 
 header {
 	background-size: cover;
-
+	background-image: image-url("closed.jpg");
 	min-height: 250px;
 	text-align: center;
 	padding: 20px 0 0;
 	color: #000;
 	line-height: 1.5em;
 	position: relative;
+
+	&.isOpen {
+		background-image: image-url("open.jpg")
+	}
 
 	.background-opacity {
 		width: 100%;
