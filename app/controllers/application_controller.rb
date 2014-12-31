@@ -32,6 +32,9 @@ class ApplicationController < ActionController::Base
 			@isOpen = false
 		end
 
+		@title = "Cafe Yeondoo"
+		@description = "The best cafe in Samcheong-dong area, Seoul, Korea"
+
 		# TODO: enable Facebook API in the future
 		# url = URI.parse('https://graph.facebook.com/v2.2/127100524044142?access_token='+Rails.application.secrets.facebook_page_token)
 		# http = Net::HTTP.new(url.host, url.port)
