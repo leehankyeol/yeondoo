@@ -34,14 +34,9 @@
       version    : 'v2.2'
     });
 
-    FB.api(
-      "/coffeeyd",
-      function (response) {
-        if (response && !response.error) {
-          console.log(response);
-        }
-      }
-    );
+    FB.getLoginStatus(function(response) {
+      statusChangeCallback(response);
+    });
   };
 
   (function(d, s, id){
