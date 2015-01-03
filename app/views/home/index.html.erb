@@ -3,13 +3,16 @@
 <script>
 var marker;
 var map;
+var defaultZoom = 15;
 
 function initialize() {
 	var yeondooLatlng = new google.maps.LatLng(37.5793285, 126.9824502);
 
 	var mapOptions = {
-		zoom: 15,
-		center: yeondooLatlng
+		zoom: defaultZoom,
+		center: yeondooLatlng,
+		scrollwheel: false,
+		draggable: false
 	};
 
 	map = new google.maps.Map(document.getElementById('map-canvas'),
@@ -23,6 +26,15 @@ function initialize() {
 	});
 
 	google.maps.event.addListener(marker, 'click', toggleBounce);
+
+	google.maps.event.addListener(map, 'zoom_changed', function() {
+		zoomLevel = map.getZoom();
+		if (zoomLevel > defaultZoom) {
+			map.set('draggable', true);
+		} else {
+			map.set('draggable', false);
+		}
+	});
 }
 
 function toggleBounce() {
@@ -76,4 +88,23 @@ statusChangeCallback(response);
 <!-- <fb:login-button scope="public_profile,email" onlogin="checkLoginState();">
 </fb:login-button> -->
 
-<div class="fb-like-box-wrapper"><div class="fb-like-box" data-href="https://www.facebook.com/ydcoffee" data-colorscheme="light" data-show-faces="false" data-header="false" data-stream="true" data-show-border="false" data-width="300" data-height="1000"></div></div>
+<div class="fb-posts-wrapper">
+<h2>Facebook Photos</h2>
+<hr>
+<% @posts.each do |post| %>
+	<% if post['type'] === 'photo' %>
+		<div class="fb-post">
+			<div class="fb-post-date">
+				<%= Date.strptime(post['created_time']).strftime("%F") %>
+			</div>
+			<div class="fb-post-image">
+				<img src="https://graph.facebook.com/<%= post['object_id'] %>/picture">
+			</div>
+			<div class="fb-post-message">
+				<%= simple_format(post['message']) %>
+			</div>
+		</div>
+		<hr>
+	<% end %>
+<% end %>
+</div>
