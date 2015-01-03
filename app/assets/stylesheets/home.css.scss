@@ -71,9 +71,49 @@ header {
 	padding: 0px
 }
 
-.fb-like-box-wrapper {
-	width: 320px;
-	margin: 20px auto;
+.fb-posts-wrapper {
+	padding: 20px;
+
+	h2 {
+		font-size: 1.5em;
+		text-align: center;
+		margin-bottom: 30px;
+	}
+
+	.fb-post {
+		padding: 10px 0;
+		line-height: 1.5em;
+
+		.fb-post-date {
+			font-weight: 700;
+			text-align: center;
+			font-size: 1.3em;
+			margin-bottom: 10px;
+		}
+
+		.fb-post-image {
+			text-align: center;
+
+			img {
+				width: 100%;
+				max-width: 600px;
+			}
+		}
+
+		.fb-post-message {
+			p {
+				margin-bottom: 10px;
+
+				&:first-child {
+					margin-top: 10px;
+				}
+
+				&:last-child {
+					margin: 0;
+				}
+			}
+		}
+	}
 }
 
 footer {

@@ -76,4 +76,23 @@ statusChangeCallback(response);
 <!-- <fb:login-button scope="public_profile,email" onlogin="checkLoginState();">
 </fb:login-button> -->
 
-<div class="fb-like-box-wrapper"><div class="fb-like-box" data-href="https://www.facebook.com/ydcoffee" data-colorscheme="light" data-show-faces="false" data-header="false" data-stream="true" data-show-border="false" data-width="300" data-height="1000"></div></div>
+<div class="fb-posts-wrapper">
+<h2>Facebook Photos</h2>
+<hr>
+<% @posts.each do |post| %>
+	<% if post['type'] === 'photo' %>
+		<div class="fb-post">
+			<div class="fb-post-date">
+				<%= Date.strptime(post['created_time']).strftime("%F") %>
+			</div>
+			<div class="fb-post-image">
+				<img src="https://graph.facebook.com/<%= post['object_id'] %>/picture">
+			</div>
+			<div class="fb-post-message">
+				<%= simple_format(post['message']) %>
+			</div>
+		</div>
+		<hr>
+	<% end %>
+<% end %>
+</div>
