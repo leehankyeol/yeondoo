@@ -3,13 +3,16 @@
 <script>
 var marker;
 var map;
+var defaultZoom = 15;
 
 function initialize() {
 	var yeondooLatlng = new google.maps.LatLng(37.5793285, 126.9824502);
 
 	var mapOptions = {
-		zoom: 15,
-		center: yeondooLatlng
+		zoom: defaultZoom,
+		center: yeondooLatlng,
+		scrollwheel: false,
+		draggable: false
 	};
 
 	map = new google.maps.Map(document.getElementById('map-canvas'),
@@ -23,6 +26,15 @@ function initialize() {
 	});
 
 	google.maps.event.addListener(marker, 'click', toggleBounce);
+
+	google.maps.event.addListener(map, 'zoom_changed', function() {
+		zoomLevel = map.getZoom();
+		if (zoomLevel > defaultZoom) {
+			map.set('draggable', true);
+		} else {
+			map.set('draggable', false);
+		}
+	});
 }
 
 function toggleBounce() {
