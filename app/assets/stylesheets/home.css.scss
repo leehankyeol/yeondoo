@@ -2,6 +2,10 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+$brown-color: #5a4132;
+$light-brown-color: #f9f3e8;
+$green-color: #7fb241;
+
 body {
 	font-family: 'Lato', sans-serif;
 	font-weight: 300;
@@ -202,7 +206,7 @@ appears on the left side of the page.
     left: 0;
     bottom: 0;
     z-index: 1000; /* so the menu or its navicon stays above all content */
-    background: #191818;
+    background: $brown-color;
     overflow-y: auto;
     -webkit-overflow-scrolling: touch;
 }
@@ -244,7 +248,7 @@ appears on the left side of the page.
     */
     #menu .pure-menu-selected,
     #menu .pure-menu-heading {
-        background: #1f8dd6;
+        background: $light-brown-color;
     }
         /*
         This styles a link within a selected menu item `<li>`.
