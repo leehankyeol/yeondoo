@@ -29,42 +29,82 @@ $(document).ready(function() {
 		}
 	});
 
+	// Layout from PureCss
 	var layout   = document.getElementById('layout'),
-        menu     = document.getElementById('menu'),
-        menuLink = document.getElementById('menuLink');
+		menu     = document.getElementById('menu'),
+		menuLink = document.getElementById('menuLink');
 
-    function toggleClass(element, className) {
-        var classes = element.className.split(/\s+/),
-            length = classes.length,
-            i = 0;
+	function toggleClass(element, className) {
+		var classes = element.className.split(/\s+/),
+			length = classes.length,
+			i = 0;
 
-        for(; i < length; i++) {
-          if (classes[i] === className) {
-            classes.splice(i, 1);
-            break;
-          }
-        }
-        // The className is not found
-        if (length === classes.length) {
-            classes.push(className);
-        }
+		for(; i < length; i++) {
+		  if (classes[i] === className) {
+			classes.splice(i, 1);
+			break;
+		  }
+		}
+		// The className is not found
+		if (length === classes.length) {
+			classes.push(className);
+		}
 
-        element.className = classes.join(' ');
-    }
+		element.className = classes.join(' ');
+	}
 
-    menuLink.onclick = function (e) {
-        var active = 'active';
+	menuLink.onclick = function (e) {
+		var active = 'active';
 
-        e.preventDefault();
-        toggleClass(layout, active);
-        toggleClass(menu, active);
-        toggleClass(menuLink, active);
-    };
+		e.preventDefault();
+		toggleClass(layout, active);
+		toggleClass(menu, active);
+		toggleClass(menuLink, active);
+	};
+
+	
+	// Google Map API
+	if ($('#map-canvas').length > 0) {
+		var marker;
+		var map;
+		var defaultZoom = 15;
+
+		var yeondooLatlng = new google.maps.LatLng(37.5793285, 126.9824502);
+
+		var mapOptions = {
+			zoom: defaultZoom,
+			center: yeondooLatlng,
+			scrollwheel: false,
+			draggable: false
+		};
+
+		map = new google.maps.Map(document.getElementById('map-canvas'),
+			mapOptions);
+
+		marker = new google.maps.Marker({
+				position: yeondooLatlng,
+				map: map,
+				title: 'Yeondoo',
+				animation: google.maps.Animation.DROP,
+		});
+
+		google.maps.event.addListener(marker, 'click', toggleBounce);
+
+		google.maps.event.addListener(map, 'zoom_changed', function() {
+			zoomLevel = map.getZoom();
+			if (zoomLevel > defaultZoom) {
+				map.set('draggable', true);
+			} else {
+				map.set('draggable', false);
+			}
+		});
+
+		function toggleBounce() {
+			if (marker.getAnimation() != null) {
+				marker.setAnimation(null);
+			} else {
+				marker.setAnimation(google.maps.Animation.BOUNCE);
+			}
+		}
+	}
 });
-
-// From Purecss.io
-(function (window, document) {
-
-    
-
-}(this, this.document));
