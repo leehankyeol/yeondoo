@@ -1,3 +1,3 @@
 #Cafe Yeondoo
 
-The website, based on Ruby On Rails, of the one of the best places, [Cafe Yeondoo](https://www.facebook.com/ydcoffee), in Samcheong-dong area, Seoul, Korea.
+The website, based on Ruby On Rails, of the best cafe, [Cafe Yeondoo](http://yeondoo.kr), in Samcheong-dong area, Seoul, Korea.

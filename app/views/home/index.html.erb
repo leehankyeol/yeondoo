@@ -1,61 +1,11 @@
-<!-- Map -->
-<script src="https://maps.googleapis.com/maps/api/js?v=3.exp"></script>
-<script>
-var marker;
-var map;
-var defaultZoom = 15;
-
-function initialize() {
-	var yeondooLatlng = new google.maps.LatLng(37.5793285, 126.9824502);
-
-	var mapOptions = {
-		zoom: defaultZoom,
-		center: yeondooLatlng,
-		scrollwheel: false,
-		draggable: false
-	};
-
-	map = new google.maps.Map(document.getElementById('map-canvas'),
-		mapOptions);
-
-	marker = new google.maps.Marker({
-			position: yeondooLatlng,
-			map: map,
-			title: 'Yeondoo',
-			animation: google.maps.Animation.DROP,
-	});
-
-	google.maps.event.addListener(marker, 'click', toggleBounce);
-
-	google.maps.event.addListener(map, 'zoom_changed', function() {
-		zoomLevel = map.getZoom();
-		if (zoomLevel > defaultZoom) {
-			map.set('draggable', true);
-		} else {
-			map.set('draggable', false);
-		}
-	});
-}
-
-function toggleBounce() {
-	if (marker.getAnimation() != null) {
-		marker.setAnimation(null);
-	} else {
-		marker.setAnimation(google.maps.Animation.BOUNCE);
-	}
-}
-
-google.maps.event.addDomListener(window, 'load', initialize);
-</script>
-
 <div class="map-canvas-wrapper"><div id="map-canvas"></div>
 </div>
 
 <script>
 // This is called with the results from from FB.getLoginStatus().
 function statusChangeCallback(response) {
-console.log('statusChangeCallback');
-console.log(response);
+// console.log('statusChangeCallback');
+// console.log(response);
 // The response object is returned with a status field that lets the
 // app know the current login status of the person.
 // Full docs on the response object can be found in the documentation
