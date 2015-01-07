@@ -51,7 +51,7 @@ statusChangeCallback(response);
 				<img src="https://graph.facebook.com/<%= post['object_id'] %>/picture">
 			</div>
 			<div class="fb-post-message">
-				<%= simple_format(post['message']) %>
+				<%= auto_link(simple_format(post['message']), :link => :urls, :html => { :target => '_blank' }) %>
 			</div>
 		</div>
 		<hr>
