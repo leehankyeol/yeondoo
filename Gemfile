@@ -43,3 +43,6 @@ end
 
 # Use debugger
 # gem 'debugger', group: [:development, :test]
+
+# Use rails_autolink
+gem 'rails_autolink', '~> 1.1.6'
