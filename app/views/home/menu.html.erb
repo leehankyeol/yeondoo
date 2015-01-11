@@ -9,11 +9,11 @@
 		</span>
 		<span class="menu-price">
 			<span class="menu-default">
-				<%= menu[:default] %> <%= number_to_currency(menu[:price]) %>
+				<%= menu[:default].capitalize %> <%= number_to_currency(menu[:price], locale: :ko) %>
 			</span>
 			<% if !menu[:option].nil? %>
 			<span class="menu-default">
-				<%= menu[:option] %> <%= number_to_currency(menu[:option_price]) %>
+				<%= menu[:option].capitalize %> <%= number_to_currency(menu[:option_price], locale: :ko) %>
 			</span>
 			<% end %>
 		</span>
@@ -28,11 +28,11 @@
 		</span>
 		<span class="menu-price">
 			<span class="menu-default">
-				<%= menu[:default] %> <%= number_to_currency(menu[:price]) %>
+				<%= menu[:default].capitalize %> <%= number_to_currency(menu[:price], locale: :ko) %>
 			</span>
 			<% if !menu[:option].nil? %>
 			<span class="menu-default">
-				<%= menu[:option] %> <%= number_to_currency(menu[:option_price]) %>
+				<%= menu[:option].capitalize %> <%= number_to_currency(menu[:option_price], locale: :ko) %>
 			</span>
 			<% end %>
 		</span>
