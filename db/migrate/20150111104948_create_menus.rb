@@ -4,9 +4,11 @@ class CreateMenus < ActiveRecord::Migration
       t.string :name
       t.string :category
       t.string :subcategory
+      t.string :tag
+      t.string :default
       t.integer :price
       t.string :option
-      t.string :option_price
+      t.integer :option_price
 
       t.timestamps
     end
