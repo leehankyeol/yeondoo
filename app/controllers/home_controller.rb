@@ -19,4 +19,8 @@ class HomeController < ApplicationController
 
   def blog
   end
+
+  def menu
+
+  end
 end
