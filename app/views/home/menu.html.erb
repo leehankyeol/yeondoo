@@ -19,6 +19,16 @@
 		</span>
 	</div>
 <% end %>
+<div class="menu-detail">
+	<ul>
+		<li>
+			1 free refill offered for free.
+		</li>
+		<li>
+		<%= number_to_currency(@price_for_additional_refill, locale: :ko) %> is charged for each additional refill.
+		</li>
+	</ul>
+</div>
 
 <h3>Dutch coffee</h3>
 <% @dutch_coffees.each do |menu| %>
@@ -38,5 +48,4 @@
 		</span>
 	</div>
 <% end %>
-
 </div>

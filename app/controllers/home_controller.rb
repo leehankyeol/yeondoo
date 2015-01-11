@@ -24,6 +24,7 @@ class HomeController < ApplicationController
     menus = Menu.all
     @handdrip_coffees = []
     @dutch_coffees = []
+    @price_for_additional_refill = 2000
 
     menus.each do |menu|
       case menu[:tag]
