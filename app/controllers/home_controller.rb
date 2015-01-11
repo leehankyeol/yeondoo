@@ -24,6 +24,7 @@ class HomeController < ApplicationController
     menus = Menu.all
     @handdrip_coffees = []
     @dutch_coffees = []
+    @espresso_variations = []
     @price_for_additional_refill = 2000
 
     menus.each do |menu|
@@ -32,6 +33,8 @@ class HomeController < ApplicationController
           @handdrip_coffees.push(menu)
         when 'dutch'
           @dutch_coffees.push(menu)
+        when 'espresso variation'
+          @espresso_variations.push(menu)
       end
     end
   end

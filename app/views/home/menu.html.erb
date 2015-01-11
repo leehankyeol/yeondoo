@@ -22,7 +22,7 @@
 <div class="menu-detail">
 	<ul>
 		<li>
-			1 free refill offered for free.
+			1 free refill is offered for free.
 		</li>
 		<li>
 		<%= number_to_currency(@price_for_additional_refill, locale: :ko) %> is charged for each additional refill.
@@ -48,4 +48,31 @@
 		</span>
 	</div>
 <% end %>
+
+<h3>Espresso variations</h3>
+<% @espresso_variations.each do |menu| %>
+	<div class="menu">
+		<span class="menu-name">
+			<%= menu[:name] %>
+		</span>
+		<span class="menu-price">
+			<span class="menu-default">
+				<%= menu[:default].capitalize %> <%= number_to_currency(menu[:price], locale: :ko) %>
+			</span>
+			<% if !menu[:option].nil? %>
+			<span class="menu-default">
+				<%= menu[:option].capitalize %> <%= number_to_currency(menu[:option_price], locale: :ko) %>
+			</span>
+			<% end %>
+		</span>
+	</div>
+<% end %>
+<div class="menu-detail">
+	<ul>
+		<li>
+			1 free cup of hot americano is offered for free.
+		</li>
+	</ul>
+</div>
+
 </div>

@@ -41,3 +41,23 @@ Menu.create(name: 'Ethiopia', category: 'drinks', subcategory: 'coffee', tag: 'h
 Menu.create(name: 'Dutch Coffee', category: 'drinks', subcategory: 'coffee', tag: 'dutch', default: 'hot', price: 6500, option: 'iced', option_price: 6500)
 
 Menu.create(name: 'Dutch Latte', category: 'drinks', subcategory: 'coffee', tag: 'dutch', default: 'iced', price: 7000)
+
+Menu.create(name: 'Espresso', category: 'drinks', subcategory: 'coffee', tag: 'espresso variation', default: 'hot', price: 4000)
+
+Menu.create(name: 'Espresso Doppio', category: 'drinks', subcategory: 'coffee', tag: 'espresso variation', default: 'hot', price: 4500)
+
+Menu.create(name: 'Macchiato', category: 'drinks', subcategory: 'coffee', tag: 'espresso variation', default: 'hot', price: 5000)
+
+Menu.create(name: 'Espresso con panna', category: 'drinks', subcategory: 'coffee', tag: 'espresso variation', default: 'hot', price: 5000)
+
+Menu.create(name: 'Americano', category: 'drinks', subcategory: 'coffee', tag: 'espresso variation', default: 'hot', price: 4500, option: 'iced', option_price: 5500)
+
+Menu.create(name: 'Cafe Vienna', category: 'drinks', subcategory: 'coffee', tag: 'espresso variation', default: 'hot', price: 5000, option: 'iced', option_price: 6000)
+
+Menu.create(name: 'Cappuccino', category: 'drinks', subcategory: 'coffee', tag: 'espresso variation', default: 'hot', price: 5000)
+
+Menu.create(name: 'Cafe Latte', category: 'drinks', subcategory: 'coffee', tag: 'espresso variation', default: 'hot', price: 5000, option: 'iced', option_price: 6000)
+
+Menu.create(name: 'Cafe Mocha', category: 'drinks', subcategory: 'coffee', tag: 'espresso variation', default: 'hot', price: 5500, option: 'iced', option_price: 6500)
+
+Menu.create(name: 'Affogato', category: 'drinks', subcategory: 'coffee', tag: 'espresso variation', default: 'iced', price: 7500)
