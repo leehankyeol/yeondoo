@@ -58,8 +58,10 @@
     <div class="pure-menu pure-menu-open">
       <!-- <a class="pure-menu-heading" href="#">Yeondoo</a> -->
       <ul>
-        <li><%= link_to('Home', {controller: 'home', action: 'index'}, class: 'pure-menu-selected') %></li>
-        <!-- <li class="menu-item-divided pure-menu-selected">
+        <li><%= link_to('Home', {controller: 'home', action: 'index'}, class: current_page?(controller: 'home', action: 'index')? 'pure-menu-selected': '') %></li>
+        <li><%= link_to('Blog', {controller: 'home', action: 'blog'}, class: current_page?(controller: 'home', action: 'blog')? 'pure-menu-selected': '') %></li>
+        <li><%= link_to('Menu', {controller: 'home', action: 'menu'}, class: current_page?(controller: 'home', action: 'menu')? 'pure-menu-selected': '') %></li>
+        <!-- <li class="menu-item-divided">
           <a href="#">Services</a>
         </li> -->
       </ul>

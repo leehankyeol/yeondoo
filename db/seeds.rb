@@ -19,3 +19,25 @@ Quote.create(name: 'Haruki Murakimi', content: 'The fresh smell of coffee soon w
 Quote.create(name: 'Howard Schultz', content: 'I can\'t imagine a day without coffee. I can\'t imagine!', book: '')
 
 Quote.create(name: 'Jerry Seinfeld', content: 'We want to do a lot of stuff; we\'re not in great shape. We didn\'t get a good night\'s sleep. We\'re a little depressed. Coffee solves all these problems in one delightful little cup.', book: '')
+
+Menu.create(name: 'Brazil', category: 'drinks', subcategory: 'coffee', tag: 'hand drip', default: 'hot', price: 5000, option: 'iced', option_price: 6000)
+
+Menu.create(name: 'Honduras', category: 'drinks', subcategory: 'coffee', tag: 'hand drip', default: 'hot', price: 5000, option: 'iced', option_price: 6000)
+
+Menu.create(name: 'Mexico', category: 'drinks', subcategory: 'coffee', tag: 'hand drip', default: 'hot', price: 5000, option: 'iced', option_price: 6000)
+
+Menu.create(name: 'Costarica', category: 'drinks', subcategory: 'coffee', tag: 'hand drip', default: 'hot', price: 5000, option: 'iced', option_price: 6000)
+
+Menu.create(name: 'Guatemala', category: 'drinks', subcategory: 'coffee', tag: 'hand drip', default: 'hot', price: 5000, option: 'iced', option_price: 6000)
+
+Menu.create(name: 'Colombia', category: 'drinks', subcategory: 'coffee', tag: 'hand drip', default: 'hot', price: 5000, option: 'iced', option_price: 6000)
+
+Menu.create(name: 'Kenya', category: 'drinks', subcategory: 'coffee', tag: 'hand drip', default: 'hot', price: 5000, option: 'iced', option_price: 6000)
+
+Menu.create(name: 'Tanzania', category: 'drinks', subcategory: 'coffee', tag: 'hand drip', default: 'hot', price: 5000, option: 'iced', option_price: 6000)
+
+Menu.create(name: 'Ethiopia', category: 'drinks', subcategory: 'coffee', tag: 'hand drip', default: 'hot', price: 5000, option: 'iced', option_price: 6000)
+
+Menu.create(name: 'Dutch Coffee', category: 'drinks', subcategory: 'coffee', tag: 'dutch', default: 'hot', price: 6500, option: 'iced', option_price: 6500)
+
+Menu.create(name: 'Dutch Latte', category: 'drinks', subcategory: 'coffee', tag: 'dutch', default: 'iced', price: 7000)

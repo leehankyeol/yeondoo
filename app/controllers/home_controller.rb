@@ -16,4 +16,22 @@ class HomeController < ApplicationController
 
   def privacy
   end
+
+  def blog
+  end
+
+  def menu
+    menus = Menu.all
+    @handdrip_coffees = []
+    @dutch_coffees = []
+
+    menus.each do |menu|
+      case menu[:tag]
+        when 'hand drip'
+          @handdrip_coffees.push(menu)
+        when 'dutch'
+          @dutch_coffees.push(menu)
+      end
+    end
+  end
 end

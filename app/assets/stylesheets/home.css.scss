@@ -21,6 +21,26 @@ a {
     }
 }
 
+hr {
+    height: 1px;
+    border: 0;
+    color: #bbb;
+    background-color: #bbb;
+}
+
+h2 {
+    font-size: 1.5em;
+    text-align: center;
+    margin: 20px 0;
+    font-weight: 400;
+}
+
+h3 {
+    font-size: 1.1em;
+    text-align: center;
+    margin: 13px 0;
+}
+
 header {
 	background-size: cover;
 	background-image: image-url("closed.jpg");
@@ -84,11 +104,9 @@ header {
 .fb-posts-wrapper {
 	padding: 20px;
 
-	h2 {
-		font-size: 1.5em;
-		text-align: center;
-		margin-bottom: 30px;
-	}
+    h2 {
+        margin-top: 0;
+    }
 
 	.fb-post {
 		padding: 10px 0;
@@ -336,5 +354,27 @@ Hides the menu at `48em`, but modify this based on your app's needs.
 
     #layout.active .menu-link {
         left: 150px;
+    }
+}
+
+.blog {
+    padding: 20px;
+}
+
+.menu-wrapper {
+    padding: 20px;
+
+    h3 {
+        margin-top: 20px;
+    }
+
+    .menu {
+        margin: 10px;
+        clear: both;
+
+        .menu-price {
+            float: right;
+            font-size: 0.8em;
+        }
     }
 }
