@@ -1,0 +1,42 @@
+<div class="menu-wrapper">
+<h2>Menus (prices in <a href="http://www.xe.com/currency/krw-south-korean-won">KRW</a>)</h2>
+<hr>
+<h3>Hand drip coffee</h3>
+<% @handdrip_coffees.each do |menu| %>
+	<div class="menu">
+		<span class="menu-name">
+			<%= menu[:name] %>
+		</span>
+		<span class="menu-price">
+			<span class="menu-default">
+				<%= menu[:default] %> <%= number_to_currency(menu[:price]) %>
+			</span>
+			<% if !menu[:option].nil? %>
+			<span class="menu-default">
+				<%= menu[:option] %> <%= number_to_currency(menu[:option_price]) %>
+			</span>
+			<% end %>
+		</span>
+	</div>
+<% end %>
+
+<h3>Dutch coffee</h3>
+<% @dutch_coffees.each do |menu| %>
+	<div class="menu">
+		<span class="menu-name">
+			<%= menu[:name] %>
+		</span>
+		<span class="menu-price">
+			<span class="menu-default">
+				<%= menu[:default] %> <%= number_to_currency(menu[:price]) %>
+			</span>
+			<% if !menu[:option].nil? %>
+			<span class="menu-default">
+				<%= menu[:option] %> <%= number_to_currency(menu[:option_price]) %>
+			</span>
+			<% end %>
+		</span>
+	</div>
+<% end %>
+
+</div>
