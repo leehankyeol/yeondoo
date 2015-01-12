@@ -38,6 +38,80 @@ Menu.create(name: 'Tanzania', category: 'drinks', subcategory: 'coffee', tag: 'h
 
 Menu.create(name: 'Ethiopia', category: 'drinks', subcategory: 'coffee', tag: 'hand drip', default: 'hot', price: 5000, option: 'iced', option_price: 6000)
 
-Menu.create(name: 'Dutch Coffee', category: 'drinks', subcategory: 'coffee', tag: 'dutch', default: 'hot', price: 6500, option: 'iced', option_price: 6500)
+Menu.create(name: 'Dutch coffee', category: 'drinks', subcategory: 'coffee', tag: 'dutch', default: 'hot', price: 6500, option: 'iced', option_price: 6500)
 
-Menu.create(name: 'Dutch Latte', category: 'drinks', subcategory: 'coffee', tag: 'dutch', default: 'iced', price: 7000)
+Menu.create(name: 'Dutch latte', category: 'drinks', subcategory: 'coffee', tag: 'dutch', default: 'iced', price: 7000)
+
+Menu.create(name: 'Espresso', category: 'drinks', subcategory: 'coffee', tag: 'espresso variation', default: 'hot', price: 4000)
+
+Menu.create(name: 'Espresso doppio', category: 'drinks', subcategory: 'coffee', tag: 'espresso variation', default: 'hot', price: 4500)
+
+Menu.create(name: 'Macchiato', category: 'drinks', subcategory: 'coffee', tag: 'espresso variation', default: 'hot', price: 5000)
+
+Menu.create(name: 'Espresso con panna', category: 'drinks', subcategory: 'coffee', tag: 'espresso variation', default: 'hot', price: 5000)
+
+Menu.create(name: 'Americano', category: 'drinks', subcategory: 'coffee', tag: 'espresso variation', default: 'hot', price: 4500, option: 'iced', option_price: 5500)
+
+Menu.create(name: 'Cafe Vienna', category: 'drinks', subcategory: 'coffee', tag: 'espresso variation', default: 'hot', price: 5000, option: 'iced', option_price: 6000)
+
+Menu.create(name: 'Cappuccino', category: 'drinks', subcategory: 'coffee', tag: 'espresso variation', default: 'hot', price: 5000)
+
+Menu.create(name: 'Cafe latte', category: 'drinks', subcategory: 'coffee', tag: 'espresso variation', default: 'hot', price: 5000, option: 'iced', option_price: 6000)
+
+Menu.create(name: 'Cafe mocha', category: 'drinks', subcategory: 'coffee', tag: 'espresso variation', default: 'hot', price: 5500, option: 'iced', option_price: 6500)
+
+Menu.create(name: 'Affogato', category: 'drinks', subcategory: 'coffee', tag: 'espresso variation', default: 'iced', price: 7500)
+
+Menu.create(name: 'Earl grey', category: 'drinks', subcategory: 'tea', tag: 'red tea', default: 'hot', price: 6000, option: 'iced', option_price: 6000)
+
+Menu.create(name: 'Assam', category: 'drinks', subcategory: 'tea', tag: 'red tea', default: 'hot', price: 6000, option: 'iced', option_price: 6000)
+
+Menu.create(name: 'Peppermint rooibos', category: 'drinks', subcategory: 'tea', tag: 'red tea', default: 'hot', price: 6000, option: 'iced', option_price: 6000)
+
+Menu.create(name: 'Royal milk tea', category: 'drinks', subcategory: 'tea', tag: 'red tea', default: 'hot', price: 6000, option: 'iced', option_price: 7000)
+
+Menu.create(name: 'Chamomile medley', category: 'drinks', subcategory: 'tea', tag: '', default: 'hot', price: 6000, option: 'iced', option_price: 6000)
+
+Menu.create(name: 'Citron', category: 'drinks', subcategory: 'tea', tag: '', default: 'hot', price: 6000, option: 'iced', option_price: 6000)
+
+Menu.create(name: 'Omija', category: 'drinks', subcategory: 'tea', tag: '', default: 'hot', price: 6000, option: 'iced', option_price: 7000)
+
+Menu.create(name: 'Lemon', category: 'drinks', subcategory: 'tea', tag: '', default: 'hot', price: 6000, option: 'iced', option_price: 7000)
+
+Menu.create(name: 'Quince', category: 'drinks', subcategory: 'tea', tag: '', default: 'hot', price: 6000, option: 'iced', option_price: 7000)
+
+Menu.create(name: 'Tangerine ginger', category: 'drinks', subcategory: 'tea', tag: '', default: 'hot', price: 6000, option: 'iced', option_price: 6000)
+
+Menu.create(name: 'Hot chocolate', category: 'drinks', subcategory: 'beverage', tag: '', default: 'hot', price: 6000, option: 'iced', option_price: 7000)
+
+Menu.create(name: 'Lemonade', category: 'drinks', subcategory: 'beverage', tag: '', default: 'iced', price: 7000)
+
+Menu.create(name: 'Grapefruitade', category: 'drinks', subcategory: 'beverage', tag: '', default: 'iced', price: 7000)
+
+Menu.create(name: 'Citronade', category: 'drinks', subcategory: 'beverage', tag: '', default: 'iced', price: 7000)
+
+Menu.create(name: 'Orange juice', category: 'drinks', subcategory: 'beverage', tag: '', default: 'iced', price: 7000)
+
+Menu.create(name: 'Häagen-Dazs', category: 'drinks', subcategory: 'beverage', tag: '', default: 'iced', price: 6500)
+
+Menu.create(name: 'Vin chaud', category: 'drinks', subcategory: 'wine', tag: 'mixed', default: 'hot', price: 8000)
+
+Menu.create(name: 'Sangria', category: 'drinks', subcategory: 'wine', tag: 'mixed', default: 'iced', price: 8000)
+
+Menu.create(name: 'La Mision Cabernet Sauvignon', category: 'drinks', subcategory: 'wine', tag: '', default: 'bottle', price: 38000)
+
+Menu.create(name: 'Rosso Veronese', category: 'drinks', subcategory: 'wine', tag: '', default: 'bottle', price: 23000)
+
+Menu.create(name: 'The Magnificent Wine Co. House Wine', category: 'drinks', subcategory: 'wine', tag: '', default: 'bottle', price: 40000)
+
+Menu.create(name: 'Monte Guelfo Chianti', category: 'drinks', subcategory: 'wine', tag: '', default: 'bottle', price: 38000)
+
+Menu.create(name: 'New York cheesecake', category: 'sides', subcategory: 'cake', tag: '', default: 'piece', price: 5500)
+
+Menu.create(name: 'Bagle w/ cream cheese', category: 'sides', subcategory: 'bread', tag: '', default: 'piece', price: 3500)
+
+Menu.create(name: 'Honey butter bread', category: 'sides', subcategory: 'bread', tag: '', default: 'piece', price: 5000)
+
+Menu.create(name: 'Chocloate cookie', category: 'sides', subcategory: 'cookie', tag: '', default: 'piece', price: 2000)
+
+Menu.create(name: 'Olives', category: 'sides', subcategory: 'vegetable', tag: '', default: 'dish', price: 2000)

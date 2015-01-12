@@ -35,9 +35,9 @@
       version    : 'v2.2'
     });
 
-    FB.getLoginStatus(function(response) {
-      statusChangeCallback(response);
-    });
+    // FB.getLoginStatus(function(response) {
+    //   statusChangeCallback(response);
+    // });
   };
 
   (function(d, s, id){
@@ -56,7 +56,6 @@
 
   <div id="menu">
     <div class="pure-menu pure-menu-open">
-      <!-- <a class="pure-menu-heading" href="#">Yeondoo</a> -->
       <ul>
         <li><%= link_to('Home', {controller: 'home', action: 'index'}, class: current_page?(controller: 'home', action: 'index')? 'pure-menu-selected': '') %></li>
         <li><%= link_to('Blog', {controller: 'home', action: 'blog'}, class: current_page?(controller: 'home', action: 'blog')? 'pure-menu-selected': '') %></li>

@@ -1,0 +1,15 @@
+<div class="menu">
+	<span class="menu-name">
+		<%= menu[:name] %>
+	</span>
+	<span class="menu-price">
+		<span class="menu-default">
+			<%= menu[:default].capitalize %> <%= number_to_currency(menu[:price], locale: :ko) %>
+		</span>
+		<% if !menu[:option].nil? %>
+		<span class="menu-default">
+			<%= menu[:option].capitalize %> <%= number_to_currency(menu[:option_price], locale: :ko) %>
+		</span>
+		<% end %>
+	</span>
+</div>
