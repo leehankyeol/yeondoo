@@ -20,9 +20,9 @@ Quote.create(name: 'Howard Schultz', content: 'I can\'t imagine a day without co
 
 Quote.create(name: 'Jerry Seinfeld', content: 'We want to do a lot of stuff; we\'re not in great shape. We didn\'t get a good night\'s sleep. We\'re a little depressed. Coffee solves all these problems in one delightful little cup.', book: '')
 
-Menu.create(name: 'Single-origin', category: 'beans', subcategory: '', tag: '', default: '100g', price: 7000, option: '200g', option_price: 13000)
+Menu.create(name: 'Single-origin beans', category: 'beans', subcategory: '', tag: 'delivery', default: '100g', price: 7000, option: '200g', option_price: 13000)
 
-Menu.create(name: 'Blended', category: 'beans', subcategory: '', tag: '', default: '100g', price: 7000, option: '200g', option_price: 13000)
+Menu.create(name: 'Blended beans', category: 'beans', subcategory: '', tag: 'delivery', default: '100g', price: 7000, option: '200g', option_price: 13000)
 
 Menu.create(name: 'Brazil', category: 'drinks', subcategory: 'coffee', tag: 'hand drip', default: 'hot', price: 5000, option: 'iced', option_price: 6000)
 
@@ -45,6 +45,10 @@ Menu.create(name: 'Ethiopia', category: 'drinks', subcategory: 'coffee', tag: 'h
 Menu.create(name: 'Dutch coffee', category: 'drinks', subcategory: 'coffee', tag: 'dutch', default: 'hot', price: 6500, option: 'iced', option_price: 6500)
 
 Menu.create(name: 'Dutch latte', category: 'drinks', subcategory: 'coffee', tag: 'dutch', default: 'iced', price: 7000)
+
+Menu.create(name: 'Bottle set', category: 'drinks', subcategory: 'coffee', tag: 'dutch', default: 'box', price: 11000)
+
+Menu.create(name: 'Dutch pouch set', category: 'drinks', subcategory: 'coffee', tag: 'dutch, delivery', default: 'box', price: 11000)
 
 Menu.create(name: 'Espresso', category: 'drinks', subcategory: 'coffee', tag: 'espresso variation', default: 'hot', price: 4000)
 

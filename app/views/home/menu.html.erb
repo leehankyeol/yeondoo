@@ -1,16 +1,16 @@
 <div class="menu-wrapper">
 	<h2>Menu (prices in <a href="http://www.xe.com/currency/krw-south-korean-won">KRW</a>)</h2>
 	<hr>
-	<h3>Coffee beans</h3>
+	<h3>Delivery available</h3>
 	<ul class="menu-list">
-	<% @beans.each do |menu| %>
+	<% @deliveries.each do |menu| %>
 		<%= render partial: "menu/menu", locals: {menu: menu} %>
 	<% end %>
 	</ul>
 	<div class="menu-detail">
 		<ul>
 			<li>
-				Please refer to the list of <span class="italic">hand drip coffee</span> for countries.
+				Please refer to the list of <span class="italic">hand drip coffee</span> for origins of coffee beans.
 			</li>
 			<li>
 				Free delivery is offered for orders over <%= number_to_currency(@price_for_free_delivery, locale: :ko) %>, or <%= number_to_currency(@price_for_delivery, locale: :ko) %> is added to the total price as delivery fee.
@@ -44,6 +44,13 @@
 		<%= render partial: "menu/menu", locals: {menu: menu} %>
 	<% end %>
 	</ul>
+	<div class="menu-detail">
+		<ul>
+			<li>
+				A bottle set consists of a bottle of dutch coffee and a paper box.
+			</li>
+		</ul>
+	</div>
 
 	<h3>Espresso variations</h3>
 	<ul class="menu-list">

@@ -22,6 +22,7 @@ class HomeController < ApplicationController
 
   def menu
     menus = Menu.all
+    @deliveries = []
     @beans = []
     @handdrip_coffees = []
     @dutch_coffees = []
@@ -38,31 +39,35 @@ class HomeController < ApplicationController
     @price_for_glass_wine = 8000
 
     menus.each do |menu|
-      case menu[:tag]
-        when 'hand drip'
-          @handdrip_coffees.push(menu)
-        when 'dutch'
-          @dutch_coffees.push(menu)
-        when 'espresso variation'
-          @espresso_variations.push(menu)
-        when 'red tea'
-          @red_teas.push(menu)
-        when 'mixed'
-          @mixed_wines.push(menu)
-        when ''
-          case menu[:subcategory]
-            when 'tea'
-              @teas.push(menu)
-            when 'beverage'
-              @beverages.push(menu)
-            when 'wine'
-              @wines.push(menu)
-          end
-          case menu[:category]
-            when 'beans'
-              @beans.push(menu)
-            when 'sides'
-              @sides.push(menu)
+      if menu[:tag].split.include? 'delivery'
+        @deliveries.push(menu)
+      else
+        case menu[:tag]
+          when 'hand drip'
+            @handdrip_coffees.push(menu)
+          when 'dutch'
+            @dutch_coffees.push(menu)
+          when 'espresso variation'
+            @espresso_variations.push(menu)
+          when 'red tea'
+            @red_teas.push(menu)
+          when 'mixed'
+            @mixed_wines.push(menu)
+          when ''
+            case menu[:subcategory]
+              when 'tea'
+                @teas.push(menu)
+              when 'beverage'
+                @beverages.push(menu)
+              when 'wine'
+                @wines.push(menu)
+            end
+            case menu[:category]
+              when 'beans'
+                @beans.push(menu)
+              when 'sides'
+                @sides.push(menu)
+            end
           end
         end
       end
