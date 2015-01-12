@@ -100,8 +100,6 @@ Menu.create(name: 'Citronade', category: 'drinks', subcategory: 'beverage', tag:
 
 Menu.create(name: 'Orange juice', category: 'drinks', subcategory: 'beverage', tag: '', default: 'iced', price: 7000)
 
-Menu.create(name: 'Häagen-Dazs', category: 'drinks', subcategory: 'beverage', tag: '', default: 'iced', price: 6500)
-
 Menu.create(name: 'Vin chaud', category: 'drinks', subcategory: 'wine', tag: 'mixed', default: 'hot', price: 8000)
 
 Menu.create(name: 'Sangria', category: 'drinks', subcategory: 'wine', tag: 'mixed', default: 'iced', price: 8000)
@@ -119,6 +117,8 @@ Menu.create(name: 'New York cheesecake', category: 'sides', subcategory: 'cake',
 Menu.create(name: 'Bagle w/ cream cheese', category: 'sides', subcategory: 'bread', tag: '', default: 'piece', price: 3500)
 
 Menu.create(name: 'Honey butter bread', category: 'sides', subcategory: 'bread', tag: '', default: 'piece', price: 5000)
+
+Menu.create(name: 'Häagen-Dazs', category: 'sides', subcategory: 'icecream', tag: '', default: 'iced', price: 6500)
 
 Menu.create(name: 'Chocloate cookie', category: 'sides', subcategory: 'cookie', tag: '', default: 'piece', price: 2000)
 
