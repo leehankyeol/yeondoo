@@ -381,7 +381,7 @@ Hides the menu at `48em`, but modify this based on your app's needs.
 
             .menu-name {
                 position: absolute;
-                top: 0;
+                top: calc(50% - 0.5em);
                 left: 0;
                 font-size: 0.9em;
 
