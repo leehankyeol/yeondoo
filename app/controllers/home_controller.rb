@@ -23,7 +23,6 @@ class HomeController < ApplicationController
   def menu
     menus = Menu.all
     @deliveries = []
-    @beans = []
     @handdrip_coffees = []
     @dutch_coffees = []
     @espresso_variations = []
@@ -63,8 +62,6 @@ class HomeController < ApplicationController
                 @wines.push(menu)
             end
             case menu[:category]
-              when 'beans'
-                @beans.push(menu)
               when 'sides'
                 @sides.push(menu)
             end
