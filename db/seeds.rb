@@ -81,3 +81,15 @@ Menu.create(name: 'Lemon', category: 'drinks', subcategory: 'tea', tag: '', defa
 Menu.create(name: 'Quince', category: 'drinks', subcategory: 'tea', tag: '', default: 'hot', price: 6000, option: 'iced', option_price: 7000)
 
 Menu.create(name: 'Tangerine ginger', category: 'drinks', subcategory: 'tea', tag: '', default: 'hot', price: 6000, option: 'iced', option_price: 6000)
+
+Menu.create(name: 'Hot chocolate', category: 'drinks', subcategory: 'beverage', tag: '', default: 'hot', price: 6000, option: 'iced', option_price: 7000)
+
+Menu.create(name: 'Lemonade', category: 'drinks', subcategory: 'beverage', tag: '', default: 'iced', price: 7000)
+
+Menu.create(name: 'Grapefruitade', category: 'drinks', subcategory: 'beverage', tag: '', default: 'iced', price: 7000)
+
+Menu.create(name: 'Citronade', category: 'drinks', subcategory: 'beverage', tag: '', default: 'iced', price: 7000)
+
+Menu.create(name: 'Orange juice', category: 'drinks', subcategory: 'beverage', tag: '', default: 'iced', price: 7000)
+
+Menu.create(name: 'Häagen-Dazs', category: 'drinks', subcategory: 'beverage', tag: '', default: 'iced', price: 6500)
