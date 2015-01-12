@@ -105,3 +105,13 @@ Menu.create(name: 'Rosso Veronese', category: 'drinks', subcategory: 'wine', tag
 Menu.create(name: 'The Magnificent Wine Co. House Wine', category: 'drinks', subcategory: 'wine', tag: '', default: 'bottle', price: 40000)
 
 Menu.create(name: 'Monte Guelfo Chianti', category: 'drinks', subcategory: 'wine', tag: '', default: 'bottle', price: 38000)
+
+Menu.create(name: 'New York cheesecake', category: 'sides', subcategory: 'cake', tag: '', default: 'piece', price: 5500)
+
+Menu.create(name: 'Bagle w/ cream cheese', category: 'sides', subcategory: 'bread', tag: '', default: 'piece', price: 3500)
+
+Menu.create(name: 'Honey butter bread', category: 'sides', subcategory: 'bread', tag: '', default: 'piece', price: 5000)
+
+Menu.create(name: 'Chocloate cookie', category: 'sides', subcategory: 'cookie', tag: '', default: 'piece', price: 2000)
+
+Menu.create(name: 'Olives', category: 'sides', subcategory: 'vegetable', tag: '', default: 'dish', price: 2000)

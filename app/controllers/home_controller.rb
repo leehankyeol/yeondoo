@@ -30,6 +30,7 @@ class HomeController < ApplicationController
     @beverages = []
     @mixed_wines = []
     @wines = []
+    @sides = []
     @price_for_additional_refill = 2000
     @price_for_glass_wine = 8000
 
@@ -53,6 +54,9 @@ class HomeController < ApplicationController
               @beverages.push(menu)
             when 'wine'
               @wines.push(menu)
+          end
+          if menu[:category] === 'sides'
+            @sides.push(menu)
           end
       end
     end

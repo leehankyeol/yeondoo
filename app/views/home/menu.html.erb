@@ -71,4 +71,8 @@
 	</ul>
 </div>
 
+<h3>Side menu</h3>
+<% @sides.each do |menu| %>
+	<%= render partial: "menu/menu", locals: {menu: menu} %>
+<% end %>
 </div>
