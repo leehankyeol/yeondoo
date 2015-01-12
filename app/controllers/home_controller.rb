@@ -26,6 +26,7 @@ class HomeController < ApplicationController
     @dutch_coffees = []
     @espresso_variations = []
     @red_teas = []
+    @teas = []
     @price_for_additional_refill = 2000
 
     menus.each do |menu|
@@ -38,6 +39,10 @@ class HomeController < ApplicationController
           @espresso_variations.push(menu)
         when 'red tea'
           @red_teas.push(menu)
+        when ''
+          if menu[:subcategory] === 'tea'
+            @teas.push(menu)
+          end
       end
     end
   end

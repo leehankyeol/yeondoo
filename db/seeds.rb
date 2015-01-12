@@ -66,6 +66,18 @@ Menu.create(name: 'Earl grey', category: 'drinks', subcategory: 'tea', tag: 'red
 
 Menu.create(name: 'Assam', category: 'drinks', subcategory: 'tea', tag: 'red tea', default: 'hot', price: 6000, option: 'iced', option_price: 6000)
 
-Menu.create(name: 'Peppermint rooibos', category: 'drinks', subcategory: 'tea', tag: 'red tea', default: 'iced', price: 6000, option: 'iced', option_price: 6000)
+Menu.create(name: 'Peppermint rooibos', category: 'drinks', subcategory: 'tea', tag: 'red tea', default: 'hot', price: 6000, option: 'iced', option_price: 6000)
 
-Menu.create(name: 'Chamomile medley', category: 'drinks', subcategory: 'tea', tag: 'red tea', default: 'iced', price: 6000, option: 'iced', option_price: 6000)
+Menu.create(name: 'Royal milk tea', category: 'drinks', subcategory: 'tea', tag: 'red tea', default: 'hot', price: 6000, option: 'iced', option_price: 7000)
+
+Menu.create(name: 'Chamomile medley', category: 'drinks', subcategory: 'tea', tag: '', default: 'hot', price: 6000, option: 'iced', option_price: 6000)
+
+Menu.create(name: 'Citron', category: 'drinks', subcategory: 'tea', tag: '', default: 'hot', price: 6000, option: 'iced', option_price: 6000)
+
+Menu.create(name: 'Omija', category: 'drinks', subcategory: 'tea', tag: '', default: 'hot', price: 6000, option: 'iced', option_price: 7000)
+
+Menu.create(name: 'Lemon', category: 'drinks', subcategory: 'tea', tag: '', default: 'hot', price: 6000, option: 'iced', option_price: 7000)
+
+Menu.create(name: 'Quince', category: 'drinks', subcategory: 'tea', tag: '', default: 'hot', price: 6000, option: 'iced', option_price: 7000)
+
+Menu.create(name: 'Tangerine ginger', category: 'drinks', subcategory: 'tea', tag: '', default: 'hot', price: 6000, option: 'iced', option_price: 6000)

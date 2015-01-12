@@ -93,5 +93,29 @@
 		</span>
 	</div>
 <% end %>
+<% @teas.each do |menu| %>
+	<div class="menu">
+		<span class="menu-name">
+			<%= menu[:name] %>
+		</span>
+		<span class="menu-price">
+			<span class="menu-default">
+				<%= menu[:default].capitalize %> <%= number_to_currency(menu[:price], locale: :ko) %>
+			</span>
+			<% if !menu[:option].nil? %>
+			<span class="menu-default">
+				<%= menu[:option].capitalize %> <%= number_to_currency(menu[:option_price], locale: :ko) %>
+			</span>
+			<% end %>
+		</span>
+	</div>
+<% end %>
+<div class="menu-detail">
+	<ul>
+		<li>
+			You might wonder what <a href="http://en.wikipedia.org/wiki/Omija_hwachae">Omija</a> is.
+		</li>
+	</ul>
+</div>
 
 </div>
