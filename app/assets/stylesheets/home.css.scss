@@ -372,23 +372,34 @@ Hides the menu at `48em`, but modify this based on your app's needs.
         margin-top: 20px;
     }
 
-    .menu {
-        margin: 10px;
-        position: relative;
-        height: 1em;
+    .menu-list {
 
-        .menu-name {
-            position: absolute;
-            top: 0;
-            left: 0;
-            font-size: 0.9em;
-        }
+        .menu {
+            margin: 10px;
+            position: relative;
+            height: 1.5em;
 
-        .menu-price {
-            position: absolute;
-            top: calc(50% - 0.5em);
-            right: 0;
-            font-size: 0.7em;
+            .menu-name {
+                position: absolute;
+                top: 0;
+                left: 0;
+                font-size: 0.9em;
+
+                @media screen and (max-width: 380px) {
+                    width: 200px;
+                }
+
+                @media screen and (max-width: 330px) {
+                    width: 180px;
+                }
+            }
+
+            .menu-price {
+                position: absolute;
+                top: calc(50% - 0.5em);
+                right: 0;
+                font-size: 0.7em;
+            }
         }
     }
 

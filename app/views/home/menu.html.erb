@@ -2,9 +2,11 @@
 <h2>Menu (prices in <a href="http://www.xe.com/currency/krw-south-korean-won">KRW</a>)</h2>
 <hr>
 <h3>Hand drip coffee</h3>
-<% @handdrip_coffees.each do |menu| %>
-	<%= render partial: "menu/menu", locals: {menu: menu} %>
-<% end %>
+	<ul class="menu-list">
+	<% @handdrip_coffees.each do |menu| %>
+		<%= render partial: "menu/menu", locals: {menu: menu} %>
+	<% end %>
+	</ul>
 <div class="menu-detail">
 	<ul>
 		<li>
@@ -17,14 +19,18 @@
 </div>
 
 <h3>Dutch coffee</h3>
-<% @dutch_coffees.each do |menu| %>
-	<%= render partial: "menu/menu", locals: {menu: menu} %>
-<% end %>
+	<ul class="menu-list">
+	<% @dutch_coffees.each do |menu| %>
+		<%= render partial: "menu/menu", locals: {menu: menu} %>
+	<% end %>
+	</ul>
 
 <h3>Espresso variations</h3>
-<% @espresso_variations.each do |menu| %>
-	<%= render partial: "menu/menu", locals: {menu: menu} %>
-<% end %>
+	<ul class="menu-list">
+	<% @espresso_variations.each do |menu| %>
+		<%= render partial: "menu/menu", locals: {menu: menu} %>
+	<% end %>
+	</ul>
 <div class="menu-detail">
 	<ul>
 		<li>
@@ -34,12 +40,14 @@
 </div>
 
 <h3>Tea</h3>
-<% @red_teas.each do |menu| %>
-	<%= render partial: "menu/menu", locals: {menu: menu} %>
-<% end %>
-<% @teas.each do |menu| %>
-	<%= render partial: "menu/menu", locals: {menu: menu} %>
-<% end %>
+	<ul class="menu-list">
+	<% @red_teas.each do |menu| %>
+		<%= render partial: "menu/menu", locals: {menu: menu} %>
+	<% end %>
+	<% @teas.each do |menu| %>
+		<%= render partial: "menu/menu", locals: {menu: menu} %>
+	<% end %>
+	</ul>
 <div class="menu-detail">
 	<ul>
 		<li>
@@ -49,17 +57,21 @@
 </div>
 
 <h3>Beverage</h3>
-<% @beverages.each do |menu| %>
-	<%= render partial: "menu/menu", locals: {menu: menu} %>
-<% end %>
+	<ul class="menu-list">
+	<% @beverages.each do |menu| %>
+		<%= render partial: "menu/menu", locals: {menu: menu} %>
+	<% end %>
+	</ul>
 
 <h3>Wine</h3>
-<% @mixed_wines.each do |menu| %>
-	<%= render partial: "menu/menu", locals: {menu: menu} %>
-<% end %>
-<% @wines.each do |menu| %>
-	<%= render partial: "menu/menu", locals: {menu: menu} %>
-<% end %>
+	<ul class="menu-list">
+	<% @mixed_wines.each do |menu| %>
+		<%= render partial: "menu/menu", locals: {menu: menu} %>
+	<% end %>
+	<% @wines.each do |menu| %>
+		<%= render partial: "menu/menu", locals: {menu: menu} %>
+	<% end %>
+	</ul>
 <div class="menu-detail">
 	<ul>
 		<li>
@@ -72,7 +84,9 @@
 </div>
 
 <h3>Side menu</h3>
-<% @sides.each do |menu| %>
-	<%= render partial: "menu/menu", locals: {menu: menu} %>
-<% end %>
+	<ul class="menu-list">
+	<% @sides.each do |menu| %>
+		<%= render partial: "menu/menu", locals: {menu: menu} %>
+	<% end %>
+	</ul>
 </div>
