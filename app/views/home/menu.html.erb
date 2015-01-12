@@ -3,21 +3,7 @@
 <hr>
 <h3>Hand drip coffee</h3>
 <% @handdrip_coffees.each do |menu| %>
-	<div class="menu">
-		<span class="menu-name">
-			<%= menu[:name] %>
-		</span>
-		<span class="menu-price">
-			<span class="menu-default">
-				<%= menu[:default].capitalize %> <%= number_to_currency(menu[:price], locale: :ko) %>
-			</span>
-			<% if !menu[:option].nil? %>
-			<span class="menu-default">
-				<%= menu[:option].capitalize %> <%= number_to_currency(menu[:option_price], locale: :ko) %>
-			</span>
-			<% end %>
-		</span>
-	</div>
+	<%= render partial: "menu/menu", locals: {menu: menu} %>
 <% end %>
 <div class="menu-detail">
 	<ul>
@@ -32,40 +18,12 @@
 
 <h3>Dutch coffee</h3>
 <% @dutch_coffees.each do |menu| %>
-	<div class="menu">
-		<span class="menu-name">
-			<%= menu[:name] %>
-		</span>
-		<span class="menu-price">
-			<span class="menu-default">
-				<%= menu[:default].capitalize %> <%= number_to_currency(menu[:price], locale: :ko) %>
-			</span>
-			<% if !menu[:option].nil? %>
-			<span class="menu-default">
-				<%= menu[:option].capitalize %> <%= number_to_currency(menu[:option_price], locale: :ko) %>
-			</span>
-			<% end %>
-		</span>
-	</div>
+	<%= render partial: "menu/menu", locals: {menu: menu} %>
 <% end %>
 
 <h3>Espresso variations</h3>
 <% @espresso_variations.each do |menu| %>
-	<div class="menu">
-		<span class="menu-name">
-			<%= menu[:name] %>
-		</span>
-		<span class="menu-price">
-			<span class="menu-default">
-				<%= menu[:default].capitalize %> <%= number_to_currency(menu[:price], locale: :ko) %>
-			</span>
-			<% if !menu[:option].nil? %>
-			<span class="menu-default">
-				<%= menu[:option].capitalize %> <%= number_to_currency(menu[:option_price], locale: :ko) %>
-			</span>
-			<% end %>
-		</span>
-	</div>
+	<%= render partial: "menu/menu", locals: {menu: menu} %>
 <% end %>
 <div class="menu-detail">
 	<ul>
@@ -77,38 +35,10 @@
 
 <h3>Tea</h3>
 <% @red_teas.each do |menu| %>
-	<div class="menu">
-		<span class="menu-name">
-			<%= menu[:name] %>
-		</span>
-		<span class="menu-price">
-			<span class="menu-default">
-				<%= menu[:default].capitalize %> <%= number_to_currency(menu[:price], locale: :ko) %>
-			</span>
-			<% if !menu[:option].nil? %>
-			<span class="menu-default">
-				<%= menu[:option].capitalize %> <%= number_to_currency(menu[:option_price], locale: :ko) %>
-			</span>
-			<% end %>
-		</span>
-	</div>
+	<%= render partial: "menu/menu", locals: {menu: menu} %>
 <% end %>
 <% @teas.each do |menu| %>
-	<div class="menu">
-		<span class="menu-name">
-			<%= menu[:name] %>
-		</span>
-		<span class="menu-price">
-			<span class="menu-default">
-				<%= menu[:default].capitalize %> <%= number_to_currency(menu[:price], locale: :ko) %>
-			</span>
-			<% if !menu[:option].nil? %>
-			<span class="menu-default">
-				<%= menu[:option].capitalize %> <%= number_to_currency(menu[:option_price], locale: :ko) %>
-			</span>
-			<% end %>
-		</span>
-	</div>
+	<%= render partial: "menu/menu", locals: {menu: menu} %>
 <% end %>
 <div class="menu-detail">
 	<ul>
@@ -120,21 +50,7 @@
 
 <h3>Beverage</h3>
 <% @beverages.each do |menu| %>
-	<div class="menu">
-		<span class="menu-name">
-			<%= menu[:name] %>
-		</span>
-		<span class="menu-price">
-			<span class="menu-default">
-				<%= menu[:default].capitalize %> <%= number_to_currency(menu[:price], locale: :ko) %>
-			</span>
-			<% if !menu[:option].nil? %>
-			<span class="menu-default">
-				<%= menu[:option].capitalize %> <%= number_to_currency(menu[:option_price], locale: :ko) %>
-			</span>
-			<% end %>
-		</span>
-	</div>
+	<%= render partial: "menu/menu", locals: {menu: menu} %>
 <% end %>
 
 </div>
