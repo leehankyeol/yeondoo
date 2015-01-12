@@ -41,6 +41,10 @@ h3 {
     margin: 13px 0;
 }
 
+.italic {
+    font-style: italic;
+}
+
 header {
 	background-size: cover;
 	background-image: image-url("closed.jpg");
@@ -370,11 +374,21 @@ Hides the menu at `48em`, but modify this based on your app's needs.
 
     .menu {
         margin: 10px;
-        clear: both;
+        position: relative;
+        height: 1em;
+
+        .menu-name {
+            position: absolute;
+            top: 0;
+            left: 0;
+            font-size: 0.9em;
+        }
 
         .menu-price {
-            float: right;
-            font-size: 0.8em;
+            position: absolute;
+            top: calc(50% - 0.5em);
+            right: 0;
+            font-size: 0.7em;
         }
     }
 
@@ -386,7 +400,7 @@ Hides the menu at `48em`, but modify this based on your app's needs.
             list-style: circle inside;
 
             li {
-                margin: 7px 0;
+                line-height: 1.5em;
             }
         }
     }

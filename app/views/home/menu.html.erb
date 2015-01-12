@@ -53,4 +53,22 @@
 	<%= render partial: "menu/menu", locals: {menu: menu} %>
 <% end %>
 
+<h3>Wine</h3>
+<% @mixed_wines.each do |menu| %>
+	<%= render partial: "menu/menu", locals: {menu: menu} %>
+<% end %>
+<% @wines.each do |menu| %>
+	<%= render partial: "menu/menu", locals: {menu: menu} %>
+<% end %>
+<div class="menu-detail">
+	<ul>
+		<li>
+			Yeondoo offers an extensive and ever-changing wine menu. Please contact us for more information.
+		</li>
+		<li>
+			<span class="italic">La Mision Cabernet Sauvignon</span> is also served with a glass at the price of <%= number_to_currency(@price_for_glass_wine, locale: :ko) %>
+		</li>
+	</ul>
+</div>
+
 </div>

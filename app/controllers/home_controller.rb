@@ -28,7 +28,10 @@ class HomeController < ApplicationController
     @red_teas = []
     @teas = []
     @beverages = []
+    @mixed_wines = []
+    @wines = []
     @price_for_additional_refill = 2000
+    @price_for_glass_wine = 8000
 
     menus.each do |menu|
       case menu[:tag]
@@ -40,12 +43,16 @@ class HomeController < ApplicationController
           @espresso_variations.push(menu)
         when 'red tea'
           @red_teas.push(menu)
+        when 'mixed'
+          @mixed_wines.push(menu)
         when ''
           case menu[:subcategory]
             when 'tea'
               @teas.push(menu)
             when 'beverage'
               @beverages.push(menu)
+            when 'wine'
+              @wines.push(menu)
           end
       end
     end
