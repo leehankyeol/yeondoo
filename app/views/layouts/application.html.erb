@@ -6,7 +6,7 @@
   <meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
   <meta property="og:title" content="<%= @title %>"/>
   <meta property="og:type" content="website"/>
-  <meta property="og:image" content="<%= asset_url "open.jpg" %>"/>
+  <meta property="og:image" content="<%= asset_url @image %>"/>
   <meta property="og:url" content="<%= request.original_url %>"/>
   <meta property="og:description" content="<%= @description %>"/>
   <meta property="fb:admins" content="1544971625"/>
@@ -14,10 +14,10 @@
   <meta name="twitter:url" content="<%= request.original_url %>">
   <meta name="twitter:title" content="<%= @title %>">
   <meta name="twitter:description" content="<%= @description %>">
-  <meta name="twitter:image" content="<%= asset_url "open.jpg" %>">
+  <meta name="twitter:image" content="<%= asset_url @image %>">
   <meta itemprop="name" content="<%= @title %>">
   <meta itemprop="description" content="<%= @description %>">
-  <meta itemprop="image" content="<%= asset_url "open.jpg" %>">
+  <meta itemprop="image" content="<%= asset_url @image %>">
   <link href='http://fonts.googleapis.com/css?family=Lato:300,400,700,300italic' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.5.0/pure-min.css">
   <%= favicon_link_tag 'favicon.png' %>
@@ -60,9 +60,6 @@
         <li><%= link_to('Home', {controller: 'home', action: 'index'}, class: current_page?(controller: 'home', action: 'index')? 'pure-menu-selected': '') %></li>
         <li><%= link_to('Blog', {controller: 'home', action: 'blog'}, class: current_page?(controller: 'home', action: 'blog')? 'pure-menu-selected': '') %></li>
         <li><%= link_to('Menu', {controller: 'home', action: 'menu'}, class: current_page?(controller: 'home', action: 'menu')? 'pure-menu-selected': '') %></li>
-        <!-- <li class="menu-item-divided">
-          <a href="#">Services</a>
-        </li> -->
       </ul>
     </div>
   </div>

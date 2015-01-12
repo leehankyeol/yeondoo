@@ -34,5 +34,6 @@ class ApplicationController < ActionController::Base
 
     @title = "Cafe Yeondoo"
     @description = "The best cafe in Samcheong-dong area, Seoul, Korea"
+    @image = params[:controller] === 'home' && params[:action] === 'menu'? 'menu.jpg': 'open.jpg'
   end
 end
