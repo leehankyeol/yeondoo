@@ -352,6 +352,7 @@ small screens.
 
             .menu-name {
                 position: absolute;
+                height: 1em;
                 top: calc(50% - 0.5em);
                 left: 0;
                 font-size: 0.9em;
@@ -362,6 +363,13 @@ small screens.
 
                 @media screen and (max-width: 330px) {
                     width: 180px;
+                }
+
+                .icon-camera {
+                    position: relative;
+                    margin: 0 0 0 2px;
+                    width: 1em;
+                    top: calc(70% - 0.5em);
                 }
             }
 

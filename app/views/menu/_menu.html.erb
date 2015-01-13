@@ -1,7 +1,16 @@
 <li class="menu">
+	<% if !menu[:image].nil? %>
+	<a class="image-popup" href="<%= asset_path('menus/'+menu[:image]) %>" data-effect="mfp-3d-unfold">
+	<% end %>
 	<span class="menu-name">
 		<%= menu[:name] %>
+		<% if !menu[:image].nil? %>
+		<%= image_tag('camera-64x64.png', class: 'icon-camera') %>
+		<% end %>
 	</span>
+	<% if !menu[:image].nil? %>
+	</a>
+	<% end %>
 	<span class="menu-price">
 		<span class="menu-default">
 			<%= menu[:default].capitalize %> <%= number_to_currency(menu[:price], locale: :ko) %>
