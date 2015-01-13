@@ -9,6 +9,7 @@ class CreateMenus < ActiveRecord::Migration
       t.integer :price
       t.string :option
       t.integer :option_price
+      t.string :image
 
       t.timestamps
     end

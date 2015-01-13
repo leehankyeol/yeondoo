@@ -13,4 +13,5 @@
 //= require jquery
 //= require turbolinks
 //= require jquery.transit.min
+//= require jquery.magnific-popup.min
 //= require_tree .

@@ -46,9 +46,9 @@ Menu.create(name: 'Dutch coffee', category: 'drinks', subcategory: 'coffee', tag
 
 Menu.create(name: 'Dutch latte', category: 'drinks', subcategory: 'coffee', tag: 'dutch', default: 'iced', price: 7000)
 
-Menu.create(name: 'Bottle set', category: 'drinks', subcategory: 'coffee', tag: 'dutch', default: 'box', price: 11000)
+Menu.create(name: 'Bottle set', category: 'drinks', subcategory: 'coffee', tag: 'dutch', default: 'box', price: 11000, image: 'dutch_bottle_set.jpg')
 
-Menu.create(name: 'Dutch pouch set', category: 'drinks', subcategory: 'coffee', tag: 'dutch, delivery', default: 'box', price: 11000)
+Menu.create(name: 'Dutch pouch set', category: 'drinks', subcategory: 'coffee', tag: 'dutch, delivery', default: 'box', price: 11000, image: 'dutch_pouch_set.jpg')
 
 Menu.create(name: 'Espresso', category: 'drinks', subcategory: 'coffee', tag: 'espresso variation', default: 'hot', price: 4000)
 

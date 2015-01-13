@@ -107,4 +107,9 @@ $(document).ready(function() {
 			}
 		}
 	}
+
+	// Magnific-popup
+	$('.image-popup').magnificPopup({
+		type: 'image'
+	});
 });
