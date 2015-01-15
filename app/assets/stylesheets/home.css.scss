@@ -79,6 +79,7 @@ header {
 		top: 25px;
 		z-index: 100;
 	}
+
 	.text {
 		padding: 10px;
 		background-color: rgba(255, 255, 255, 0.0);
@@ -96,6 +97,18 @@ header {
 			color: #f00;
 		}
 	}
+
+    .locale {
+        z-index: 100;
+        right: 20px;
+        position: absolute;
+        text-align: right;
+        color: #fff;
+
+        a {
+            color: #999
+        }
+    }
 }
 
 .map-canvas-wrapper {

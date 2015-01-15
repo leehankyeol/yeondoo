@@ -75,6 +75,10 @@
         <p><%= t('now') %> <span class="<%= @isOpen? "open": "closed" %>"><%= @isOpen? t('open'): t('closed') %></span></p>
         <p><%= t('todays_hour') %> : <%= @openHour.strftime("%H : %M") %> - <%= @closeHour.strftime("%H : %M") %></p>
       </div>
+      <div class="locale">
+        <%= link_to_unless I18n.locale == :ko, "한글", locale: :ko %> | 
+        <%= link_to_unless I18n.locale == :en, "English", locale: :en %>
+      </div>
       <div class="background-opacity"></div>
     </header>
 
