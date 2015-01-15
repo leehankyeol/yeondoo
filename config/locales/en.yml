@@ -20,4 +20,50 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
-  hello: "Hello world"
+  default_title: "Cafe Yeondoo"
+  default_description: "The best cafe in Samcheong-dong area, Seoul, Korea."
+  now: "Now"
+  open: "Open"
+  closed: "Closed"
+  todays_hour: "Today's Hours"
+
+  index:
+    title: "Home"
+    facebook_photos:
+      title: "Facebook Photos"
+      h4: "See more on <a href=\"https://www.facebook.com/ydcoffee\">Yeondoo Facebook page!</a>"
+
+  blog:
+    title: "Blog"
+    description: "We want to share stories of Cafe Yeondoo."
+    temp_introduction: "Ready to be deployed soon..."
+
+  menu:
+    title: "Menu"
+    description: "Cafe Yeondoo offers coffee beans, hand drip coffee, dutch coffee, and other drinks that you'll definitely enjoy."
+    delivery_available:
+      title: "Delivery available"
+      detail1: "Please refer to the list of <span class=\"italic\">hand drip coffee</span> for various origins of coffee beans."
+      detail2: "Free delivery is offered for orders over %{price_for_free_delivery}, or %{price_for_delivery} is added to the total price as delivery fee."
+      detail3: "For delivery order, please contact us!"
+    handdrip_coffee:
+      title: "Hand drip coffee"
+      detail1: "1 free cup of hand drip coffee is offered for refill."
+      detail2: "%{price_for_additional_refill} is charged for each additional refill."
+    dutch_coffee:
+      title: "Dutch coffee"
+      detail1: "A bottle set consists of a bottle of dutch coffee and a paper box."
+    espresso_variations:
+      title: "Espresso variations"
+      detail1: "1 free cup of hot americano is offered for refill."
+    tea:
+      title: "Tea"
+      detail1: "You might wonder what <a href=\"http://en.wikipedia.org/wiki/Omija_hwachae\">Omija</a> is."
+    beverage:
+      title: "Beverage"
+    wine:
+      title: "Wine"
+      detail1: "We offer an extensive and ever-changing wine menu. Please contact us for more information."
+      detail2: "<span class=\"italic\">La Mision Cabernet Sauvignon</span> is also served with a glass at the price of %{price_for_glass_wine}."
+    side_menu:
+      title: "Side menu"

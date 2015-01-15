@@ -3,6 +3,7 @@ class ApplicationController < ActionController::Base
   # For APIs, you may want to use :null_session instead.
   protect_from_forgery with: :exception
   before_filter :set_constants
+  before_action :set_locale
 
   def set_constants
     quote_id = rand(Quote.count) + 1
@@ -31,5 +32,9 @@ class ApplicationController < ActionController::Base
     else
       @isOpen = false
     end
+  end
+
+  def set_locale
+    I18n.locale = params[:locale] || I18n.default_locale
   end
 end
