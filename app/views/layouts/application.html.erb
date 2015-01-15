@@ -87,6 +87,9 @@
     <footer>
       <p class="content"><%= @quote.content %></p>
       <p class="name">- <%= @quote.name %></p>
+      <address><%= t('address') %></address>
+      <p class="email">cafeyd at gmail.com</p>
+      <p class="phonenumber"><a href="tel:<%= t('phonenumber_raw') %>"><%= t('phonenumber') %></a>
       <p>Copyright © 2014 by Yeondoo</p>
       <p><%= link_to('Facebook', 'https://www.facebook.com/ydcoffee', target: '_blank') %> - <%= link_to('Github', 'https://github.com/leehankyeol/yeondoo', target: '_blank') %></p>
     </footer>

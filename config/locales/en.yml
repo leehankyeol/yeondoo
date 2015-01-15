@@ -26,6 +26,9 @@ en:
   open: "Open"
   closed: "Closed"
   todays_hour: "Today's Hours"
+  address: "Hwa-dong 138-6, Jongro-gu, Seoul, Korea"
+  phonenumber: "82-2-736-5001"
+  phonenumber_raw: "8227365001"
 
   index:
     title: "Home"
