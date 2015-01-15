@@ -1,11 +1,11 @@
-<% title 'Menu : Cafe Yeondoo' %>
-<% description 'Cafe Yeondoo offers coffee beans, hand drip coffee, dutch coffee, and other drinks that you\'ll definitely enjoy.' %>
+<% title t('menu.title') + ' : ' + t('default_title') %>
+<% description t('menu.description') %>
 <% image 'menu.jpg' %>
 
 <div class="menu-wrapper">
-	<h2>Menu (prices in <a href="http://www.xe.com/currency/krw-south-korean-won">KRW</a>)</h2>
+	<h2><%= t('menu.title') %></h2>
 	<hr>
-	<h3>Delivery available</h3>
+	<h3><%= t('menu.delivery_available.title') %></h3>
 	<ul class="menu-list">
 	<% @deliveries.each do |menu| %>
 		<%= render partial: "menu/menu", locals: {menu: menu} %>
@@ -13,19 +13,13 @@
 	</ul>
 	<div class="menu-detail">
 		<ul>
-			<li>
-				Please refer to the list of <span class="italic">hand drip coffee</span> for various origins of coffee beans.
-			</li>
-			<li>
-				Free delivery is offered for orders over <%= number_to_currency(@price_for_free_delivery, locale: :ko) %>, or <%= number_to_currency(@price_for_delivery, locale: :ko) %> is added to the total price as delivery fee.
-			</li>
-			<li>
-				For delivery order, please contact us!
-			</li>
+			<li><%= simple_format(t('menu.delivery_available.detail1')) %></li>
+			<li><%= simple_format(t('menu.delivery_available.detail2', :price_for_free_delivery => number_to_currency(@price_for_free_delivery, locale: :ko), :price_for_delivery => number_to_currency(@price_for_delivery, locale: :ko))) %></li>
+			<li><%= simple_format(t('menu.delivery_available.detail3')) %></li>
 		</ul>
 	</div>
 
-	<h3>Hand drip coffee</h3>
+	<h3><%= t('menu.handdrip_coffee.title') %></h3>
 	<ul class="menu-list">
 	<% @handdrip_coffees.each do |menu| %>
 		<%= render partial: "menu/menu", locals: {menu: menu} %>
@@ -33,16 +27,12 @@
 	</ul>
 	<div class="menu-detail">
 		<ul>
-			<li>
-				1 cup of hand drip coffee is offered for free.
-			</li>
-			<li>
-				<%= number_to_currency(@price_for_additional_refill, locale: :ko) %> is charged for each additional refill.
-			</li>
+			<li><%= simple_format(t('menu.handdrip_coffee.detail1')) %></li>
+			<li><%= simple_format(t('menu.handdrip_coffee.detail2', :price_for_additional_refill => number_to_currency(@price_for_additional_refill, locale: :ko))) %></li>
 		</ul>
 	</div>
 
-	<h3>Dutch coffee</h3>
+	<h3><%= t('menu.dutch_coffee.title') %></h3>
 	<ul class="menu-list">
 	<% @dutch_coffees.each do |menu| %>
 		<%= render partial: "menu/menu", locals: {menu: menu} %>
@@ -50,13 +40,11 @@
 	</ul>
 	<div class="menu-detail">
 		<ul>
-			<li>
-				A bottle set consists of a bottle of dutch coffee and a paper box.
-			</li>
+			<li><%= simple_format(t('menu.dutch_coffee.detail1')) %></li>
 		</ul>
 	</div>
 
-	<h3>Espresso variations</h3>
+	<h3><%= t('menu.espresso_variations.title') %></h3>
 	<ul class="menu-list">
 	<% @espresso_variations.each do |menu| %>
 		<%= render partial: "menu/menu", locals: {menu: menu} %>
@@ -64,13 +52,11 @@
 	</ul>
 	<div class="menu-detail">
 		<ul>
-			<li>
-				1 cup of hot americano is offered for free.
-			</li>
+			<li><%= simple_format(t('menu.espresso_variations.detail1')) %></li>
 		</ul>
 	</div>
 
-	<h3>Tea</h3>
+	<h3><%= t('menu.tea.title') %></h3>
 	<ul class="menu-list">
 	<% @red_teas.each do |menu| %>
 		<%= render partial: "menu/menu", locals: {menu: menu} %>
@@ -81,20 +67,18 @@
 	</ul>
 	<div class="menu-detail">
 		<ul>
-			<li>
-				You might wonder what <a href="http://en.wikipedia.org/wiki/Omija_hwachae">Omija</a> is.
-			</li>
+			<li><%= simple_format(t('menu.tea.detail1')) %></li>
 		</ul>
 	</div>
 
-	<h3>Beverage</h3>
+	<h3><%= t('menu.beverage.title') %></h3>
 	<ul class="menu-list">
 	<% @beverages.each do |menu| %>
 		<%= render partial: "menu/menu", locals: {menu: menu} %>
 	<% end %>
 	</ul>
 
-	<h3>Wine</h3>
+	<h3><%= t('menu.wine.title') %></h3>
 	<ul class="menu-list">
 	<% @mixed_wines.each do |menu| %>
 		<%= render partial: "menu/menu", locals: {menu: menu} %>
@@ -105,16 +89,12 @@
 	</ul>
 	<div class="menu-detail">
 		<ul>
-			<li>
-				We offer an extensive and ever-changing wine menu. Please contact us for more information.
-			</li>
-			<li>
-				<span class="italic">La Mision Cabernet Sauvignon</span> is also served with a glass at the price of <%= number_to_currency(@price_for_glass_wine, locale: :ko) %>
-			</li>
+			<li><%= simple_format(t('menu.wine.detail1')) %></li>
+			<li><%= simple_format(t('menu.wine.detail2', :price_for_glass_wine => number_to_currency(@price_for_glass_wine, locale: :ko))) %></li>
 		</ul>
 	</div>
 
-	<h3>Side menu</h3>
+	<h3><%= t('menu.side_menu.title') %></h3>
 	<ul class="menu-list">
 	<% @sides.each do |menu| %>
 		<%= render partial: "menu/menu", locals: {menu: menu} %>

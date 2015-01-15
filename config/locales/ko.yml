@@ -1,25 +1,55 @@
-# Files in the config/locales directory are used for internationalization
-# and are automatically loaded by Rails. If you want to use locales other
-# than English, add the necessary files in this directory.
-#
-# To use the locales, use `I18n.t`:
-#
-#     I18n.t 'hello'
-#
-# In views, this is aliased to just `t`:
-#
-#     <%= t('hello') %>
-#
-# To use a different locale, set it with `I18n.locale`:
-#
-#     I18n.locale = :es
-#
-# This would use the information in config/locales/es.yml.
-#
-# To learn more, please read the Rails Internationalization guide
-# available at http://guides.rubyonrails.org/i18n.html.
-
 ko:
+  default_title: "카페 연두"
+  default_description: "3호선 안국역 1번 출구 정독도서관 맞은 편에 있는 카페 연두입니다."
+  now: "지금"
+  open: "영업 중"
+  closed: "영업 마감"
+  todays_hour: "오늘 영업 시간"
+  address: "서울시 종로구 화동 138-6"
+  phonenumber: "02-736-5001"
+  phonenumber_raw: "027365001"
+
+  index:
+    title: "홈"
+    facebook_photos:
+      title: "페이스북 사진"
+      h4: "더 많은 사진은 <a href=\"https://www.facebook.com/ydcoffee\">연두 페이스북 페이지</a>에서 보세요!"
+
+  blog:
+    title: "블로그"
+    description: "카페 연두의 소식입니다."
+    temp_introduction: "준비 중입니다."
+
+  menu:
+    title: "메뉴"
+    description: "카페 연두에서는 고급 원두와 핸드 드립 커피, 더치 커피, 그리고 다른 맛있는 음료를 판매하고 있습니다."
+    delivery_available:
+      title: "택배 가능 품목"
+      detail1: "원두 원산지는 핸드 드립 커피 목록을 참고해주세요."
+      detail2: "%{price_for_free_delivery} 이상의 주문은 무료 배송해드립니다. 그 외에는 %{price_for_delivery}의 배송비가 추가됩니다."
+      detail3: "배달 문의는 연두로 해주세요!"
+    handdrip_coffee:
+      title: "핸드 드립 커피"
+      detail1: "핸드 드립 커피 1잔을 무료 리필해드립니다."
+      detail2: "추가 리필은 %{price_for_additional_refill}에 드립니다."
+    dutch_coffee:
+      title: "더치 커피"
+      detail1: "병 세트에는 튼튼한 종이 박스가 포함되어 있습니다."
+    espresso_variations:
+      title: "에스프레소 베이스"
+      detail1: "따뜻한 아메리카노 1잔을 무료 리필해드립니다."
+    tea:
+      title: "차"
+      detail1: "<a href=\"http://ko.wikipedia.org/wiki/%EC%98%A4%EB%AF%B8%EC%9E%90\">오미자</a>가 무엇인지 궁금하세요?"
+    beverage:
+      title: "음료"
+    wine:
+      title: "와인"
+      detail1: "와인 메뉴는 때에 따라 조금씩 달라집니다. 자세한 정보는 연두로 문의주세요."
+      detail2: "<span class=\"italic\">La Mision Cabernet Sauvignon</span>은 1잔에 %{price_for_glass_wine}에 드립니다."
+    side_menu:
+      title: "사이드 메뉴"
+
   number:
     # Used in number_with_delimiter()
     # These are also the defaults for 'currency', 'percentage', 'precision', and 'human'
