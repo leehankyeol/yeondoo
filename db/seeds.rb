@@ -21,114 +21,209 @@ Quote.create(name: 'Howard Schultz', content: 'I can\'t imagine a day without co
 Quote.create(name: 'Jerry Seinfeld', content: 'We want to do a lot of stuff; we\'re not in great shape. We didn\'t get a good night\'s sleep. We\'re a little depressed. Coffee solves all these problems in one delightful little cup.', book: '')
 
 single_origin = Menu.create(category: 'beans', subcategory: '', tag: 'delivery', default: '100g', price: 7000, option: '200g', option_price: 13000)
-
 single_origin.translations.create(name: '싱글 오리진 원두', :locale => 'ko')
 single_origin.translations.create(name: 'Single-origin beans', :locale => 'en')
 
 blended = Menu.create(category: 'beans', subcategory: '', tag: 'delivery', default: '100g', price: 7000, option: '200g', option_price: 13000)
-
 blended.translations.create(name: '블렌디드 원두', :locale => 'ko')
 blended.translations.create(name: 'Blended beans', :locale => 'en')
 
 brazil = Menu.create(category: 'drinks', subcategory: 'coffee', tag: 'hand drip', default: 'hot', price: 5000, option: 'iced', option_price: 6000)
-
 brazil.translations.create(name: '브라질', :locale => 'ko')
 brazil.translations.create(name: 'Brazil', :locale => 'en')
 
-Menu.create(name: 'Honduras', category: 'drinks', subcategory: 'coffee', tag: 'hand drip', default: 'hot', price: 5000, option: 'iced', option_price: 6000)
+honduras = Menu.create(category: 'drinks', subcategory: 'coffee', tag: 'hand drip', default: 'hot', price: 5000, option: 'iced', option_price: 6000)
+honduras.translations.create(name: '온두라스', :locale => 'ko')
+honduras.translations.create(name: 'Honduras', :locale => 'en')
 
-Menu.create(name: 'Mexico', category: 'drinks', subcategory: 'coffee', tag: 'hand drip', default: 'hot', price: 5000, option: 'iced', option_price: 6000)
+mexico = Menu.create(category: 'drinks', subcategory: 'coffee', tag: 'hand drip', default: 'hot', price: 5000, option: 'iced', option_price: 6000)
+mexico.translations.create(name: '멕시코', :locale => 'ko')
+mexico.translations.create(name: 'Mexico', :locale => 'en')
 
-Menu.create(name: 'Costarica', category: 'drinks', subcategory: 'coffee', tag: 'hand drip', default: 'hot', price: 5000, option: 'iced', option_price: 6000)
+costarica = Menu.create(category: 'drinks', subcategory: 'coffee', tag: 'hand drip', default: 'hot', price: 5000, option: 'iced', option_price: 6000)
+costarica.translations.create(name: '코스타리카', :locale => 'ko')
+costarica.translations.create(name: 'Costarica', :locale => 'en')
 
-Menu.create(name: 'Guatemala', category: 'drinks', subcategory: 'coffee', tag: 'hand drip', default: 'hot', price: 5000, option: 'iced', option_price: 6000)
+guatemala = Menu.create(category: 'drinks', subcategory: 'coffee', tag: 'hand drip', default: 'hot', price: 5000, option: 'iced', option_price: 6000)
+guatemala.translations.create(name: '과테말라', :locale => 'ko')
+guatemala.translations.create(name: 'Guatemala', :locale => 'en')
 
-Menu.create(name: 'Colombia', category: 'drinks', subcategory: 'coffee', tag: 'hand drip', default: 'hot', price: 5000, option: 'iced', option_price: 6000)
+colombia = Menu.create(category: 'drinks', subcategory: 'coffee', tag: 'hand drip', default: 'hot', price: 5000, option: 'iced', option_price: 6000)
+colombia.translations.create(name: '콜롬비아', :locale => 'ko')
+colombia.translations.create(name: 'Colombia', :locale => 'en')
 
-Menu.create(name: 'Kenya', category: 'drinks', subcategory: 'coffee', tag: 'hand drip', default: 'hot', price: 5000, option: 'iced', option_price: 6000)
+kenya = Menu.create(category: 'drinks', subcategory: 'coffee', tag: 'hand drip', default: 'hot', price: 5000, option: 'iced', option_price: 6000)
+kenya.translations.create(name: '케냐', :locale => 'ko')
+kenya.translations.create(name: 'Kenya', :locale => 'en')
 
-Menu.create(name: 'Tanzania', category: 'drinks', subcategory: 'coffee', tag: 'hand drip', default: 'hot', price: 5000, option: 'iced', option_price: 6000)
+tanzania = Menu.create(category: 'drinks', subcategory: 'coffee', tag: 'hand drip', default: 'hot', price: 5000, option: 'iced', option_price: 6000)
+tanzania.translations.create(name: '탄자니아', :locale => 'ko')
+tanzania.translations.create(name: 'Tanzania', :locale => 'en')
 
-Menu.create(name: 'Ethiopia', category: 'drinks', subcategory: 'coffee', tag: 'hand drip', default: 'hot', price: 5000, option: 'iced', option_price: 6000)
+ethiopia = Menu.create(category: 'drinks', subcategory: 'coffee', tag: 'hand drip', default: 'hot', price: 5000, option: 'iced', option_price: 6000)
+ethiopia.translations.create(name: '에티오피아', :locale => 'ko')
+ethiopia.translations.create(name: 'Ethiopia', :locale => 'en')
 
-Menu.create(name: 'Dutch coffee', category: 'drinks', subcategory: 'coffee', tag: 'dutch', default: 'hot', price: 6500, option: 'iced', option_price: 6500)
+dutch_coffee = Menu.create(category: 'drinks', subcategory: 'coffee', tag: 'dutch', default: 'hot', price: 6500, option: 'iced', option_price: 6500)
+dutch_coffee.translations.create(name: '더치', :locale => 'ko')
+dutch_coffee.translations.create(name: 'Dutch coffee', :locale => 'en')
 
-Menu.create(name: 'Dutch latte', category: 'drinks', subcategory: 'coffee', tag: 'dutch', default: 'iced', price: 7000)
+dutch_latte = Menu.create(category: 'drinks', subcategory: 'coffee', tag: 'dutch', default: 'iced', price: 7000)
+dutch_latte.translations.create(name: '더치 라떼', :locale => 'ko')
+dutch_latte.translations.create(name: 'Dutch latte', :locale => 'en')
 
-Menu.create(name: 'Bottle set', category: 'drinks', subcategory: 'coffee', tag: 'dutch', default: 'box', price: 11000, image: 'dutch_bottle_set.jpg')
+bottle_set = Menu.create(category: 'drinks', subcategory: 'coffee', tag: 'dutch', default: 'box', price: 11000, image: 'dutch_bottle_set.jpg')
+bottle_set.translations.create(name: '병 세트', :locale => 'ko')
+bottle_set.translations.create(name: 'Bottle set', :locale => 'en')
 
-Menu.create(name: 'Dutch pouch set', category: 'drinks', subcategory: 'coffee', tag: 'dutch, delivery', default: 'box', price: 11000, image: 'dutch_pouch_set.jpg')
+pouch_set = Menu.create(category: 'drinks', subcategory: 'coffee', tag: 'dutch, delivery', default: 'box', price: 11000, image: 'dutch_pouch_set.jpg')
+pouch_set.translations.create(name: '파우치 세트', :locale => 'ko')
+pouch_set.translations.create(name: 'Dutch pouch set', :locale => 'en')
 
-Menu.create(name: 'Espresso', category: 'drinks', subcategory: 'coffee', tag: 'espresso variation', default: 'hot', price: 4000)
+espresso = Menu.create(category: 'drinks', subcategory: 'coffee', tag: 'espresso variation', default: 'hot', price: 4000)
+espresso.translations.create(name: '에스프레소', :locale => 'ko')
+espresso.translations.create(name: 'Espresso', :locale => 'en')
 
-Menu.create(name: 'Espresso doppio', category: 'drinks', subcategory: 'coffee', tag: 'espresso variation', default: 'hot', price: 4500)
+doppio = Menu.create(category: 'drinks', subcategory: 'coffee', tag: 'espresso variation', default: 'hot', price: 4500)
+doppio.translations.create(name: '에스프레소 도피오', :locale => 'ko')
+doppio.translations.create(name: 'Espresso doppio', :locale => 'en')
 
-Menu.create(name: 'Macchiato', category: 'drinks', subcategory: 'coffee', tag: 'espresso variation', default: 'hot', price: 5000)
+macchiato = Menu.create(category: 'drinks', subcategory: 'coffee', tag: 'espresso variation', default: 'hot', price: 5000)
+macchiato.translations.create(name: '마키아토', :locale => 'ko')
+macchiato.translations.create(name: 'Macchiato', :locale => 'en')
 
-Menu.create(name: 'Espresso con panna', category: 'drinks', subcategory: 'coffee', tag: 'espresso variation', default: 'hot', price: 5000)
+con_panna = Menu.create(category: 'drinks', subcategory: 'coffee', tag: 'espresso variation', default: 'hot', price: 5000)
+con_panna.translations.create(name: '에스프레소 콘 판나', :locale => 'ko')
+con_panna.translations.create(name: 'Espresso con panna', :locale => 'en')
 
-Menu.create(name: 'Americano', category: 'drinks', subcategory: 'coffee', tag: 'espresso variation', default: 'hot', price: 4500, option: 'iced', option_price: 5500)
+americano = Menu.create(category: 'drinks', subcategory: 'coffee', tag: 'espresso variation', default: 'hot', price: 4500, option: 'iced', option_price: 5500)
+americano.translations.create(name: '아메리카노', :locale => 'ko')
+americano.translations.create(name: 'Americano', :locale => 'en')
 
-Menu.create(name: 'Cafe Vienna', category: 'drinks', subcategory: 'coffee', tag: 'espresso variation', default: 'hot', price: 5000, option: 'iced', option_price: 6000)
+cafe_vienna = Menu.create(category: 'drinks', subcategory: 'coffee', tag: 'espresso variation', default: 'hot', price: 5000, option: 'iced', option_price: 6000)
+cafe_vienna.translations.create(name: '비엔나 커피', :locale => 'ko')
+cafe_vienna.translations.create(name: 'Cafe Vienna', :locale => 'en')
 
-Menu.create(name: 'Cappuccino', category: 'drinks', subcategory: 'coffee', tag: 'espresso variation', default: 'hot', price: 5000)
+cappuccino = Menu.create(category: 'drinks', subcategory: 'coffee', tag: 'espresso variation', default: 'hot', price: 5000)
+cappuccino.translations.create(name: '카푸치노', :locale => 'ko')
+cappuccino.translations.create(name: 'Cappuccino', :locale => 'en')
 
-Menu.create(name: 'Cafe latte', category: 'drinks', subcategory: 'coffee', tag: 'espresso variation', default: 'hot', price: 5000, option: 'iced', option_price: 6000)
+cafe_latte = Menu.create(category: 'drinks', subcategory: 'coffee', tag: 'espresso variation', default: 'hot', price: 5000, option: 'iced', option_price: 6000)
+cafe_latte.translations.create(name: '카페 라떼', :locale => 'ko')
+cafe_latte.translations.create(name: 'Cafe latte', :locale => 'en')
 
-Menu.create(name: 'Cafe mocha', category: 'drinks', subcategory: 'coffee', tag: 'espresso variation', default: 'hot', price: 5500, option: 'iced', option_price: 6500)
+cafe_mocha = Menu.create(category: 'drinks', subcategory: 'coffee', tag: 'espresso variation', default: 'hot', price: 5500, option: 'iced', option_price: 6500)
+cafe_mocha.translations.create(name: '카페 모카', :locale => 'ko')
+cafe_mocha.translations.create(name: 'Cafe mocha', :locale => 'en')
 
-Menu.create(name: 'Affogato', category: 'drinks', subcategory: 'coffee', tag: 'espresso variation', default: 'iced', price: 7500)
+affogato = Menu.create(category: 'drinks', subcategory: 'coffee', tag: 'espresso variation', default: 'iced', price: 7500)
+affogato.translations.create(name: '아포가토', :locale => 'ko')
+affogato.translations.create(name: 'Affogato', :locale => 'en')
 
-Menu.create(name: 'Earl grey', category: 'drinks', subcategory: 'tea', tag: 'red tea', default: 'hot', price: 6000, option: 'iced', option_price: 6000)
+earl_grey = Menu.create(category: 'drinks', subcategory: 'tea', tag: 'red tea', default: 'hot', price: 6000, option: 'iced', option_price: 6000)
+earl_grey.translations.create(name: '얼 그레이', :locale => 'ko')
+earl_grey.translations.create(name: 'Earl grey', :locale => 'en')
 
-Menu.create(name: 'Assam', category: 'drinks', subcategory: 'tea', tag: 'red tea', default: 'hot', price: 6000, option: 'iced', option_price: 6000)
+assam = Menu.create(category: 'drinks', subcategory: 'tea', tag: 'red tea', default: 'hot', price: 6000, option: 'iced', option_price: 6000)
+assam.translations.create(name: '아쌈', :locale => 'ko')
+assam.translations.create(name: 'Assam', :locale => 'en')
 
-Menu.create(name: 'Peppermint rooibos', category: 'drinks', subcategory: 'tea', tag: 'red tea', default: 'hot', price: 6000, option: 'iced', option_price: 6000)
+rooibos = Menu.create(category: 'drinks', subcategory: 'tea', tag: 'red tea', default: 'hot', price: 6000, option: 'iced', option_price: 6000)
+rooibos.translations.create(name: '페퍼민트 루이보스', :locale => 'ko')
+rooibos.translations.create(name: 'Peppermint rooibos', :locale => 'en')
 
-Menu.create(name: 'Royal milk tea', category: 'drinks', subcategory: 'tea', tag: 'red tea', default: 'hot', price: 6000, option: 'iced', option_price: 7000)
+milk_tea = Menu.create(category: 'drinks', subcategory: 'tea', tag: 'red tea', default: 'hot', price: 6000, option: 'iced', option_price: 7000)
+milk_tea.translations.create(name: '밀크 티', :locale => 'ko')
+milk_tea.translations.create(name: 'Royal milk tea', :locale => 'en')
 
-Menu.create(name: 'Chamomile medley', category: 'drinks', subcategory: 'tea', tag: '', default: 'hot', price: 6000, option: 'iced', option_price: 6000)
+chamomile = Menu.create(category: 'drinks', subcategory: 'tea', tag: '', default: 'hot', price: 6000, option: 'iced', option_price: 6000)
+chamomile.translations.create(name: '캐모마일', :locale => 'ko')
+chamomile.translations.create(name: 'Chamomile medley', :locale => 'en')
 
-Menu.create(name: 'Citron', category: 'drinks', subcategory: 'tea', tag: '', default: 'hot', price: 6000, option: 'iced', option_price: 6000)
+citron = Menu.create(category: 'drinks', subcategory: 'tea', tag: '', default: 'hot', price: 6000, option: 'iced', option_price: 6000)
+citron.translations.create(name: '유자', :locale => 'ko')
+citron.translations.create(name: 'Citron', :locale => 'en')
 
-Menu.create(name: 'Omija', category: 'drinks', subcategory: 'tea', tag: '', default: 'hot', price: 6000, option: 'iced', option_price: 7000)
+omija = Menu.create(category: 'drinks', subcategory: 'tea', tag: '', default: 'hot', price: 6000, option: 'iced', option_price: 7000)
+omija.translations.create(name: '오미자', :locale => 'ko')
+omija.translations.create(name: 'Omija', :locale => 'en')
 
-Menu.create(name: 'Lemon', category: 'drinks', subcategory: 'tea', tag: '', default: 'hot', price: 6000, option: 'iced', option_price: 7000)
+lemon = Menu.create(category: 'drinks', subcategory: 'tea', tag: '', default: 'hot', price: 6000, option: 'iced', option_price: 7000)
+lemon.translations.create(name: '레몬', :locale => 'ko')
+lemon.translations.create(name: 'Lemon', :locale => 'en')
 
-Menu.create(name: 'Quince', category: 'drinks', subcategory: 'tea', tag: '', default: 'hot', price: 6000, option: 'iced', option_price: 7000)
+quince = Menu.create(category: 'drinks', subcategory: 'tea', tag: '', default: 'hot', price: 6000, option: 'iced', option_price: 7000)
+quince.translations.create(name: '모과', :locale => 'ko')
+quince.translations.create(name: 'Quince', :locale => 'en')
 
-Menu.create(name: 'Tangerine ginger', category: 'drinks', subcategory: 'tea', tag: '', default: 'hot', price: 6000, option: 'iced', option_price: 6000)
+tangerine_ginger = Menu.create(category: 'drinks', subcategory: 'tea', tag: '', default: 'hot', price: 6000, option: 'iced', option_price: 6000)
+tangerine_ginger.translations.create(name: '귤생강', :locale => 'ko')
+tangerine_ginger.translations.create(name: 'Tangerine ginger', :locale => 'en')
 
-Menu.create(name: 'Hot chocolate', category: 'drinks', subcategory: 'beverage', tag: '', default: 'hot', price: 6000, option: 'iced', option_price: 7000)
+hot_chocolate = Menu.create(category: 'drinks', subcategory: 'beverage', tag: '', default: 'hot', price: 6000, option: 'iced', option_price: 7000)
+hot_chocolate.translations.create(name: '핫 초코', :locale => 'ko')
+hot_chocolate.translations.create(name: 'Hot chocolate', :locale => 'en')
 
-Menu.create(name: 'Lemonade', category: 'drinks', subcategory: 'beverage', tag: '', default: 'iced', price: 7000)
+lemonade = Menu.create(category: 'drinks', subcategory: 'beverage', tag: '', default: 'iced', price: 7000)
+lemonade.translations.create(name: '레몬에이드', :locale => 'ko')
+lemonade.translations.create(name: 'Lemonade', :locale => 'en')
 
-Menu.create(name: 'Grapefruitade', category: 'drinks', subcategory: 'beverage', tag: '', default: 'iced', price: 7000)
+grapefruitade = Menu.create(category: 'drinks', subcategory: 'beverage', tag: '', default: 'iced', price: 7000)
+grapefruitade.translations.create(name: '자몽에이드', :locale => 'ko')
+grapefruitade.translations.create(name: 'Grapefruitade', :locale => 'en')
 
-Menu.create(name: 'Citronade', category: 'drinks', subcategory: 'beverage', tag: '', default: 'iced', price: 7000)
+citronade = Menu.create(category: 'drinks', subcategory: 'beverage', tag: '', default: 'iced', price: 7000)
+citronade.translations.create(name: '유자에이드', :locale => 'ko')
+citronade.translations.create(name: 'Citronade', :locale => 'en')
 
-Menu.create(name: 'Orange juice', category: 'drinks', subcategory: 'beverage', tag: '', default: 'iced', price: 7000)
+orange_juice = Menu.create(category: 'drinks', subcategory: 'beverage', tag: '', default: 'iced', price: 7000)
+orange_juice.translations.create(name: '오렌지 주스', :locale => 'ko')
+orange_juice.translations.create(name: 'Orange juice', :locale => 'en')
 
-Menu.create(name: 'Vin chaud', category: 'drinks', subcategory: 'wine', tag: 'mixed', default: 'hot', price: 8000)
+vin_chaud = Menu.create(category: 'drinks', subcategory: 'wine', tag: 'mixed', default: 'hot', price: 8000)
+vin_chaud.translations.create(name: '뱅쇼', :locale => 'ko')
+vin_chaud.translations.create(name: 'Vin chaud', :locale => 'en')
 
-Menu.create(name: 'Sangria', category: 'drinks', subcategory: 'wine', tag: 'mixed', default: 'iced', price: 8000)
+sangria = Menu.create(category: 'drinks', subcategory: 'wine', tag: 'mixed', default: 'iced', price: 8000)
+sangria.translations.create(name: '샹그리아', :locale => 'ko')
+sangria.translations.create(name: 'Sangria', :locale => 'en')
 
-Menu.create(name: 'La Mision Cabernet Sauvignon', category: 'drinks', subcategory: 'wine', tag: '', default: 'bottle', price: 38000)
+la_mision = Menu.create(category: 'drinks', subcategory: 'wine', tag: '', default: 'bottle', price: 38000)
+la_mision.translations.create(name: 'La Mision Cabernet Sauvignon', :locale => 'ko')
+la_mision.translations.create(name: 'La Mision Cabernet Sauvignon', :locale => 'en')
 
-Menu.create(name: 'Rosso Veronese', category: 'drinks', subcategory: 'wine', tag: '', default: 'bottle', price: 23000)
+rosso = Menu.create(category: 'drinks', subcategory: 'wine', tag: '', default: 'bottle', price: 23000)
+rosso.translations.create(name: 'Rosso Veronese', :locale => 'ko')
+rosso.translations.create(name: 'Rosso Veronese', :locale => 'en')
 
-Menu.create(name: 'The Magnificent Wine Co. House Wine', category: 'drinks', subcategory: 'wine', tag: '', default: 'bottle', price: 40000)
+house_wine = Menu.create(category: 'drinks', subcategory: 'wine', tag: '', default: 'bottle', price: 40000)
+house_wine.translations.create(name: 'The Magnificent Wine Co. House Wine', :locale => 'ko')
+house_wine.translations.create(name: 'The Magnificent Wine Co. House Wine', :locale => 'en')
 
-Menu.create(name: 'Monte Guelfo Chianti', category: 'drinks', subcategory: 'wine', tag: '', default: 'bottle', price: 38000)
+monte = Menu.create(category: 'drinks', subcategory: 'wine', tag: '', default: 'bottle', price: 38000)
+monte.translations.create(name: 'Monte Guelfo Chianti', :locale => 'ko')
+monte.translations.create(name: 'Monte Guelfo Chianti', :locale => 'en')
 
-Menu.create(name: 'New York cheesecake', category: 'sides', subcategory: 'cake', tag: '', default: 'piece', price: 5500)
+cheesecake = Menu.create(category: 'sides', subcategory: 'cake', tag: '', default: 'piece', price: 5500)
+cheesecake.translations.create(name: '뉴욕 치즈케이크', :locale => 'ko')
+cheesecake.translations.create(name: 'New York cheesecake', :locale => 'en')
 
-Menu.create(name: 'Bagle w/ cream cheese', category: 'sides', subcategory: 'bread', tag: '', default: 'piece', price: 3500)
+bagle = Menu.create(category: 'sides', subcategory: 'bread', tag: '', default: 'piece', price: 3500)
+bagle.translations.create(name: '베이글과 크림 치즈', :locale => 'ko')
+bagle.translations.create(name: 'Bagle w/ cream cheese', :locale => 'en')
 
-Menu.create(name: 'Honey butter bread', category: 'sides', subcategory: 'bread', tag: '', default: 'piece', price: 5000)
+honey_butter = Menu.create(category: 'sides', subcategory: 'bread', tag: '', default: 'piece', price: 5000)
+honey_butter.translations.create(name: '허니 버터 브레드', :locale => 'ko')
+honey_butter.translations.create(name: 'Honey butter bread', :locale => 'en')
 
-Menu.create(name: 'Häagen-Dazs', category: 'sides', subcategory: 'icecream', tag: '', default: 'iced', price: 6500)
+haagen_dazs = Menu.create(category: 'sides', subcategory: 'icecream', tag: '', default: 'cup', price: 6500)
+haagen_dazs.translations.create(name: '하겐다즈', :locale => 'ko')
+haagen_dazs.translations.create(name: 'Häagen-Dazs', :locale => 'en')
 
-Menu.create(name: 'Chocloate cookie', category: 'sides', subcategory: 'cookie', tag: '', default: 'piece', price: 2000)
+chocolate_cookie = Menu.create(category: 'sides', subcategory: 'cookie', tag: '', default: 'piece', price: 2000)
+chocolate_cookie.translations.create(name: '초코 쿠키', :locale => 'ko')
+chocolate_cookie.translations.create(name: 'Chocloate cookie', :locale => 'en')
 
-Menu.create(name: 'Olives', category: 'sides', subcategory: 'vegetable', tag: '', default: 'dish', price: 2000)
+olives = Menu.create(category: 'sides', subcategory: 'vegetable', tag: '', default: 'dish', price: 2000)
+olives.translations.create(name: '올리브', :locale => 'ko')
+olives.translations.create(name: 'Olives', :locale => 'en')
