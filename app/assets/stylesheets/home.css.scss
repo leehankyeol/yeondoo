@@ -2,12 +2,15 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+@import url(http://fonts.googleapis.com/earlyaccess/nanumgothic.css);
+
 $brown-color: #5a4132;
 $light-brown-color: #f9f3e8;
 $green-color: #7fb241;
 
 body {
 	font-family: 'Lato', sans-serif;
+    font-family: 'Nanum Gothic', serif;
 	font-weight: 300;
 	color: #777;
 }
@@ -135,7 +138,7 @@ header {
 		line-height: 1.5em;
 
 		.fb-post-date {
-			font-weight: 700;
+			font-weight: 400;
 			text-align: center;
 			font-size: 1.1em;
 			margin-bottom: 10px;

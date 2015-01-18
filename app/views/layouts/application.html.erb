@@ -22,7 +22,7 @@
   <meta itemprop="name" content="<%= content_for?(:title)? content_for(:title): default_title %>">
   <meta itemprop="description" content="<%= content_for?(:description)? content_for(:description): default_description %>">
   <meta itemprop="image" content="<%= content_for?(:image)? asset_url(content_for(:image)): asset_url(default_image) %>">
-  <link href='http://fonts.googleapis.com/css?family=Lato:300,400,700,300italic' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Lato:300,400,300italic' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.5.0/pure-min.css">
   <%= favicon_link_tag 'favicon.png' %>
   <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
