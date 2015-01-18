@@ -20,11 +20,20 @@ Quote.create(name: 'Howard Schultz', content: 'I can\'t imagine a day without co
 
 Quote.create(name: 'Jerry Seinfeld', content: 'We want to do a lot of stuff; we\'re not in great shape. We didn\'t get a good night\'s sleep. We\'re a little depressed. Coffee solves all these problems in one delightful little cup.', book: '')
 
-Menu.create(name: 'Single-origin beans', category: 'beans', subcategory: '', tag: 'delivery', default: '100g', price: 7000, option: '200g', option_price: 13000)
+single_origin = Menu.create(category: 'beans', subcategory: '', tag: 'delivery', default: '100g', price: 7000, option: '200g', option_price: 13000)
 
-Menu.create(name: 'Blended beans', category: 'beans', subcategory: '', tag: 'delivery', default: '100g', price: 7000, option: '200g', option_price: 13000)
+single_origin.translations.create(name: '싱글 오리진 원두', :locale => 'ko')
+single_origin.translations.create(name: 'Single-origin beans', :locale => 'en')
 
-Menu.create(name: 'Brazil', category: 'drinks', subcategory: 'coffee', tag: 'hand drip', default: 'hot', price: 5000, option: 'iced', option_price: 6000)
+blended = Menu.create(category: 'beans', subcategory: '', tag: 'delivery', default: '100g', price: 7000, option: '200g', option_price: 13000)
+
+blended.translations.create(name: '블렌디드 원두', :locale => 'ko')
+blended.translations.create(name: 'Blended beans', :locale => 'en')
+
+brazil = Menu.create(category: 'drinks', subcategory: 'coffee', tag: 'hand drip', default: 'hot', price: 5000, option: 'iced', option_price: 6000)
+
+brazil.translations.create(name: '브라질', :locale => 'ko')
+brazil.translations.create(name: 'Brazil', :locale => 'en')
 
 Menu.create(name: 'Honduras', category: 'drinks', subcategory: 'coffee', tag: 'hand drip', default: 'hot', price: 5000, option: 'iced', option_price: 6000)
 
