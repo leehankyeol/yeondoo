@@ -78,8 +78,8 @@ class HomeController < ApplicationController
               when 'sides'
                 @sides.push(menu)
             end
-          end
         end
       end
     end
   end
+end
