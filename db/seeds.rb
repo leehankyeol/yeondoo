@@ -77,7 +77,7 @@ bottle_set.translations.create(name: '병 세트', :locale => 'ko')
 bottle_set.translations.create(name: 'Bottle set', :locale => 'en')
 
 pouch_set = Menu.create(category: 'drinks', subcategory: 'coffee', tag: 'dutch, delivery', default: 'box', price: 11000, image: 'dutch_pouch_set.jpg')
-pouch_set.translations.create(name: '파우치 세트', :locale => 'ko')
+pouch_set.translations.create(name: '더치 파우치 세트', :locale => 'ko')
 pouch_set.translations.create(name: 'Dutch pouch set', :locale => 'en')
 
 espresso = Menu.create(category: 'drinks', subcategory: 'coffee', tag: 'espresso variation', default: 'hot', price: 4000)
