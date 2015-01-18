@@ -61,8 +61,8 @@
   <div id="menu">
     <div class="pure-menu pure-menu-open">
       <ul>
-        <li><%= link_to(t('index.title'), {controller: 'home', action: 'index'}, class: current_page?(controller: 'home', action: 'index')? 'pure-menu-selected': '') %></li>
-        <li><%= link_to(t('blog.title'), {controller: 'home', action: 'blog'}, class: current_page?(controller: 'home', action: 'blog')? 'pure-menu-selected': '') %></li>
+        <li><%= link_to(t('index.title'), {controller: 'home', action: 'index'}, class: current_page?(controller: 'home', action: 'index') || current_page?('/')? 'pure-menu-selected': '') %></li>
+        <!-- <li><%= link_to(t('blog.title'), {controller: 'home', action: 'blog'}, class: current_page?(controller: 'home', action: 'blog')? 'pure-menu-selected': '') %></li> -->
         <li><%= link_to(t('menu.title'), {controller: 'home', action: 'menu'}, class: current_page?(controller: 'home', action: 'menu')? 'pure-menu-selected': '') %></li>
       </ul>
     </div>
