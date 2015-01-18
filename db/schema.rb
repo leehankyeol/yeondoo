@@ -11,7 +11,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150112182945) do
+ActiveRecord::Schema.define(version: 20150115082847) do
+
+  create_table "menu_translations", force: true do |t|
+    t.integer  "menu_id",    null: false
+    t.string   "locale",     null: false
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "name"
+  end
+
+  add_index "menu_translations", ["locale"], name: "index_menu_translations_on_locale"
+  add_index "menu_translations", ["menu_id"], name: "index_menu_translations_on_menu_id"
 
   create_table "menus", force: true do |t|
     t.string   "name"

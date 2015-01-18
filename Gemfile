@@ -49,3 +49,6 @@ gem 'rails_autolink', '~> 1.1.6'
 
 # Use i18n
 gem 'rails-i18n', github: 'svenfuchs/rails-i18n', branch: 'master' # For 4.x
+
+# Use Globalize
+gem 'globalize', '~> 4.0.2'
