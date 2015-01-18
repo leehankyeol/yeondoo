@@ -82,4 +82,9 @@ class HomeController < ApplicationController
       end
     end
   end
+
+  def sitemap
+    render :layout => nil
+    headers['Content-Type'] = 'application/xml'
+  end
 end
