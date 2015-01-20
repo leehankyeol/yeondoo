@@ -8,17 +8,18 @@ ko:
   address: "서울시 종로구 화동 138-6"
   phonenumber: "02-736-5001"
   phonenumber_raw: "027365001"
+  temp_introduction: "준비 중입니다."
 
   index:
     title: "홈"
     facebook_photos:
       title: "페이스북 사진"
       h4: "더 많은 사진은 <a href=\"https://www.facebook.com/ydcoffee\">연두 페이스북 페이지</a>에서 보세요!"
+    no_facebook_photos: "페이스북 사진을 가져오지 못했습니다. 무엇이 문제일까요..."
 
   blog:
     title: "블로그"
     description: "카페 연두의 소식입니다."
-    temp_introduction: "준비 중입니다."
 
   menu:
     title: "메뉴"
@@ -50,24 +51,20 @@ ko:
     side_menu:
       title: "사이드 메뉴"
 
+  staffs:
+    title: "직원"
+    description: "연두의 직원들을 소개합니다."
+
   number:
-    # Used in number_with_delimiter()
-    # These are also the defaults for 'currency', 'percentage', 'precision', and 'human'
     format:
-      # Sets the separator between the units, for more precision (e.g. 1.0 / 2.0 == 0.5)
       separator: "."
-      # Delimets thousands (e.g. 1,000,000 is a million) (always in groups of three)
       delimiter: ","
-      # Number of decimals, behind the separator (the number 1 with a precision of 2 gives: 1.00)
       precision: 3
 
-    # Used in number_to_currency()
     currency:
       format:
-        # Where is the currency sign? %u is the currency unit, %n the number (default: $5.00)
         format: "%u%n"
         unit: "₩"
-        # These three are to override number.format and are optional
         separator: "."
         delimiter: ","
         precision: 0

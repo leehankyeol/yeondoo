@@ -1,0 +1,10 @@
+<% title t('staffs.title') + ' : ' + t('default_title') %>
+<% description t('staffs.description') %>
+
+<div class="staffs-wrapper">
+	<h2><%= t('staffs.title') %></h2>
+	<hr>
+	<% @staffs.each do |staff| %>
+		<%= render partial: "staff/staff", locals: {staff: staff} %>
+	<% end %>
+</div>
