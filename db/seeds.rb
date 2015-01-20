@@ -227,3 +227,15 @@ chocolate_cookie.translations.create(name: 'Chocloate cookie', :locale => 'en')
 olives = Menu.create(category: 'sides', subcategory: 'vegetable', tag: '', default: 'dish', price: 2000)
 olives.translations.create(name: '올리브', :locale => 'ko')
 olives.translations.create(name: 'Olives', :locale => 'en')
+
+park_seongyun = Staff.create(photo: 'dummy_profile.jpg', facebook_id: '100001894578713')
+park_seongyun.translations.create(name: '박성윤', description: '"잠아, 날 두고 어디 갔니?"', :locale => 'ko')
+park_seongyun.translations.create(name: 'Park Seongyun', description: '"Can\'t sleep"', :locale => 'en')
+
+park_seonghye = Staff.create(photo: 'dummy_profile.jpg', facebook_id: '100001821591937')
+park_seonghye.translations.create(name: '박성혜', description: '"행복은 사실 늘 곁에 있는 거였지? 봄 낮 막걸리 캬!"', :locale => 'ko')
+park_seonghye.translations.create(name: 'Park Seonghye', description: '"Spring, daylight, Makgolee, I\'m happy"', :locale => 'en')
+
+lee_sangeon = Staff.create(photo: 'dummy_profile.jpg', facebook_id: 'remeberthefithofnovember')
+lee_sangeon.translations.create(name: '이상언', description: '"와인에 올리브를 먹는 삶이란."', :locale => 'ko')
+lee_sangeon.translations.create(name: 'Lee Sangeon', description: '"What a life with olives and wine"', :locale => 'en')

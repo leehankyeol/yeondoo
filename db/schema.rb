@@ -11,9 +11,9 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150115082847) do
+ActiveRecord::Schema.define(version: 20150120135659) do
 
-  create_table "menu_translations", force: true do |t|
+  create_table "menu_translations", force: :cascade do |t|
     t.integer  "menu_id",    null: false
     t.string   "locale",     null: false
     t.datetime "created_at"
@@ -24,8 +24,7 @@ ActiveRecord::Schema.define(version: 20150115082847) do
   add_index "menu_translations", ["locale"], name: "index_menu_translations_on_locale"
   add_index "menu_translations", ["menu_id"], name: "index_menu_translations_on_menu_id"
 
-  create_table "menus", force: true do |t|
-    t.string   "name"
+  create_table "menus", force: :cascade do |t|
     t.string   "category"
     t.string   "subcategory"
     t.string   "tag"
@@ -38,10 +37,29 @@ ActiveRecord::Schema.define(version: 20150115082847) do
     t.string   "image"
   end
 
-  create_table "quotes", force: true do |t|
+  create_table "quotes", force: :cascade do |t|
     t.string   "name"
     t.text     "content"
     t.string   "book"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "staff_translations", force: :cascade do |t|
+    t.integer  "staff_id",    null: false
+    t.string   "locale",      null: false
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "name"
+    t.text     "description"
+  end
+
+  add_index "staff_translations", ["locale"], name: "index_staff_translations_on_locale"
+  add_index "staff_translations", ["staff_id"], name: "index_staff_translations_on_staff_id"
+
+  create_table "staffs", force: :cascade do |t|
+    t.string   "photo"
+    t.string   "facebook_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

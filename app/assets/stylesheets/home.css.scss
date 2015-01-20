@@ -442,10 +442,17 @@ small screens.
 
         h3 {
             padding: 10px 0;
+
+            .icon-facebook {
+                width: 1em;
+                vertical-align: bottom;
+            }
         }
 
         .staff-detail {
+            font-size: 0.8em;
             line-height: 1.5em;
+            text-align: center;
         }
     }
 

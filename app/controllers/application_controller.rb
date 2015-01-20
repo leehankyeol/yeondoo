@@ -6,7 +6,7 @@ class ApplicationController < ActionController::Base
   before_action :set_locale
 
   def set_constants
-    quote_id = rand(Quote.count) + 1
+    quote_id = rand(1..Quote.count)
     @quote = Quote.find(quote_id)
 
     @isOpen = nil

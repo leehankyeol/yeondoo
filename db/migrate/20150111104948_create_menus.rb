@@ -1,7 +1,6 @@
 class CreateMenus < ActiveRecord::Migration
   def change
     create_table :menus do |t|
-      t.string :name
       t.string :category
       t.string :subcategory
       t.string :tag
@@ -9,7 +8,6 @@ class CreateMenus < ActiveRecord::Migration
       t.integer :price
       t.string :option
       t.integer :option_price
-      t.string :image
 
       t.timestamps
     end
