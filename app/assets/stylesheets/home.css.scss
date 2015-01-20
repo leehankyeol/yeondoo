@@ -425,3 +425,28 @@ small screens.
         }
     }
 }
+
+.staffs-wrapper {
+    padding: 20px;
+
+    .staff {
+        padding: 15px 0;
+
+        .staff-photo {
+            width: 300px;
+            height: 300px;
+            border-radius: 50%;
+            border: 1px solid #000;
+            margin: 0 auto;
+        }
+
+        h3 {
+            padding: 10px 0;
+        }
+
+        .staff-detail {
+            line-height: 1.5em;
+        }
+    }
+
+}
