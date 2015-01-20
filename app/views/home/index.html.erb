@@ -37,25 +37,30 @@
 
 <!-- <fb:login-button scope="public_profile,email" onlogin="checkLoginState();">
 </fb:login-button> -->
-
 <div class="fb-posts-wrapper">
 <h2><%= t('index.facebook_photos.title') %></h2>
 <h4><%= simple_format(t('index.facebook_photos.h4')) %></h4>
 <hr>
-<% @posts.each do |post| %>
-	<% if post['type'] === 'photo' %>
-		<div class="fb-post">
-			<div class="fb-post-date">
-				<%= Date.strptime(post['created_time']).strftime("%F") %>
+<% if @posts.length > 0 %>
+	<% @posts.each do |post| %>
+		<% if post['type'] === 'photo' %>
+			<div class="fb-post">
+				<div class="fb-post-date">
+					<%= Date.strptime(post['created_time']).strftime("%F") %>
+				</div>
+				<div class="fb-post-image">
+					<img src="https://graph.facebook.com/<%= post['object_id'] %>/picture">
+				</div>
+				<div class="fb-post-message">
+					<%= auto_link(simple_format(post['message']), :link => :urls, :html => { :target => '_blank' }) %>
+				</div>
 			</div>
-			<div class="fb-post-image">
-				<img src="https://graph.facebook.com/<%= post['object_id'] %>/picture">
-			</div>
-			<div class="fb-post-message">
-				<%= auto_link(simple_format(post['message']), :link => :urls, :html => { :target => '_blank' }) %>
-			</div>
-		</div>
-		<hr>
+			<hr>
+		<% end %>
 	<% end %>
+<% else %>
+	<div class="no-photos">
+		<%= t('index.no_facebook_photos') %>
+	</div>
 <% end %>
 </div>
