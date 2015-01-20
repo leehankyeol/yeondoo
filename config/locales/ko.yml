@@ -14,6 +14,7 @@ ko:
     facebook_photos:
       title: "페이스북 사진"
       h4: "더 많은 사진은 <a href=\"https://www.facebook.com/ydcoffee\">연두 페이스북 페이지</a>에서 보세요!"
+    no_facebook_photos: "페이스북 사진을 가져오지 못했습니다. 무엇이 문제일까요..."
 
   blog:
     title: "블로그"

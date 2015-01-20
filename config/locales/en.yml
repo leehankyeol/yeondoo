@@ -35,6 +35,7 @@ en:
     facebook_photos:
       title: "Facebook Photos"
       h4: "See more on <a href=\"https://www.facebook.com/ydcoffee\">Yeondoo Facebook page!</a>"
+    no_facebook_photos: "We've just failed to fetch Facebook photos. I don't know what's going on..."
 
   blog:
     title: "Blog"
