@@ -1,5 +1,5 @@
 <div class="staff">
-	<div class="staff-photo" style="background-image: url(<%= asset_path(staff[:photo]) %>);"></div>
+	<div class="staff-photo" style="background-image: url(<%= asset_path('staffs/'+staff[:photo]) %>);"></div>
 	<h3><%= staff[:name] %> <a href="https://www.facebook.com/<%= staff[:facebook_id] %>" target="_blank"><%= image_tag('facebook.png', class: 'icon-facebook') %></a></h3>
 	<div class="staff-detail">
 		<%= staff[:description] %>
