@@ -4,27 +4,7 @@
 <div class="staffs-wrapper">
 	<h2><%= t('staffs.title') %></h2>
 	<hr>
-	<div class="staff">
-		<div class="staff-photo" style="background-image: url(<%= asset_path('dummy_profile.jpg') %>);"></div>
-		<h3>박성윤</h3>
-		<div class="staff-detail">
-			청춘! 너의 두 손을 가슴에 대고, 물방아 같은 심장의 고동을 들어 보라. 청춘의 피는 끓는다. 끓는 피에 뛰노는 심장은 거선(巨船)의 기관(汽罐)같이 힘있다. 이것이다. 인류의 역사를 꾸며 내려온 동력은 바로 이것이다. 이성(理性)은 투명하되 얼음과 같으며, 지혜는 날카로우나 갑 속에 든 칼이다. 청춘의 끓는 피가 아니더면, 인간이 얼마나 쓸쓸하랴? 얼음에 싸인 만물(萬物)은 죽음이 있을 뿐이다.
-		</div>
-	</div>
-
-	<div class="staff">
-		<div class="staff-photo" style="background-image: url(<%= asset_path('dummy_profile.jpg') %>);"></div>
-		<h3>박성혜</h3>
-		<div class="staff-detail">
-			청춘! 너의 두 손을 가슴에 대고, 물방아 같은 심장의 고동을 들어 보라. 청춘의 피는 끓는다. 끓는 피에 뛰노는 심장은 거선(巨船)의 기관(汽罐)같이 힘있다. 이것이다. 인류의 역사를 꾸며 내려온 동력은 바로 이것이다. 이성(理性)은 투명하되 얼음과 같으며, 지혜는 날카로우나 갑 속에 든 칼이다. 청춘의 끓는 피가 아니더면, 인간이 얼마나 쓸쓸하랴? 얼음에 싸인 만물(萬物)은 죽음이 있을 뿐이다.
-		</div>
-	</div>
-
-	<div class="staff">
-		<div class="staff-photo" style="background-image: url(<%= asset_path('dummy_profile.jpg') %>);"></div>
-		<h3>이상언</h3>
-		<div class="staff-detail">
-			청춘! 너의 두 손을 가슴에 대고, 물방아 같은 심장의 고동을 들어 보라. 청춘의 피는 끓는다. 끓는 피에 뛰노는 심장은 거선(巨船)의 기관(汽罐)같이 힘있다. 이것이다. 인류의 역사를 꾸며 내려온 동력은 바로 이것이다. 이성(理性)은 투명하되 얼음과 같으며, 지혜는 날카로우나 갑 속에 든 칼이다. 청춘의 끓는 피가 아니더면, 인간이 얼마나 쓸쓸하랴? 얼음에 싸인 만물(萬物)은 죽음이 있을 뿐이다.
-		</div>
-	</div>
+	<% @staffs.each do |staff| %>
+		<%= render partial: "staff/staff", locals: {staff: staff} %>
+	<% end %>
 </div>
