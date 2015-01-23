@@ -1,0 +1,8 @@
+<% if @posts.length > 0 then %>
+	<% @posts.each do |post| %>
+		<p><%= post.title %></p>
+		<p><%= post.summary %></p>
+	<% end %>
+<% else %>
+	No posts...
+<% end %>
