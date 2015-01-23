@@ -1,0 +1,59 @@
+.menu-wrapper {
+    padding: 20px;
+
+    h3 {
+        margin-top: 20px;
+    }
+
+    .menu-list {
+
+        .menu {
+            margin: 10px;
+            position: relative;
+            height: 1.5em;
+
+            .menu-name {
+                position: absolute;
+                height: 1em;
+                top: calc(50% - 0.5em);
+                left: 0;
+                font-size: 0.9em;
+
+                @media screen and (max-width: 380px) {
+                    width: 200px;
+                }
+
+                @media screen and (max-width: 330px) {
+                    width: 180px;
+                }
+
+                .icon-camera {
+                    position: relative;
+                    margin: 0 0 0 2px;
+                    width: 1em;
+                    top: calc(70% - 0.5em);
+                }
+            }
+
+            .menu-price {
+                position: absolute;
+                top: calc(50% - 0.5em);
+                right: 0;
+                font-size: 0.7em;
+            }
+        }
+    }
+
+    .menu-detail {
+        font-size: 0.8em;
+        padding: 1px 20px;
+
+        ul {
+            list-style: circle inside;
+
+            li {
+                line-height: 1.5em;
+            }
+        }
+    }
+}

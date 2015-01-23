@@ -5,9 +5,9 @@ Yeondoo::Application.routes.draw do
   # You can have the root of your site routed with "root"
   root 'home#index'
   get 'privacy' => 'home#privacy'
-  get 'menu'    => 'home#menu'
+  get 'menu'    => 'menu#list'
   get '/sitemap.xml'  => 'home#sitemap'
-  get 'staffs'  => 'home#staffs'
+  get 'staffs'  => 'staff#list'
   get 'blog'    => 'post#list'
   get 'blog/:title' => 'post#show'
 
