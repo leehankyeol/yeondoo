@@ -4,6 +4,7 @@ class CreatePosts < ActiveRecord::Migration
       t.string :title
       t.string :summary
       t.string :content
+      t.string :thumbnail
       t.timestamps null: false
     end
   end

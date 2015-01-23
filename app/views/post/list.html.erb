@@ -1,8 +1,21 @@
-<% if @posts.length > 0 then %>
-	<% @posts.each do |post| %>
-		<p><%= post.title %></p>
-		<p><%= post.summary %></p>
+<% title t('blog.title') + ' : ' + t('default_title') %>
+<% description t('blog.description') %>
+
+<div class="post-wrapper">
+	<h2><%= t('blog.title') %></h2>
+	<hr>
+
+	<% if @posts.length > 0 then %>
+		<ul>
+			<% @posts.each_with_index do |post, index| %>
+				<%= render partial: "post/post", locals: {post: post} %>
+				<% if @posts_length != index + 1 then %>
+				<hr>
+				<% end %>
+			<% end %>
+		</ul>
+
+	<% else %>
+		<%= t('temp_introduction') %>
 	<% end %>
-<% else %>
-	No posts...
-<% end %>
+</div>

@@ -14,42 +14,42 @@
 ActiveRecord::Schema.define(version: 20150123013659) do
 
   create_table "menu_translations", force: :cascade do |t|
-    t.integer  "menu_id",                null: false
-    t.string   "locale",     limit: 255, null: false
+    t.integer  "menu_id",    null: false
+    t.string   "locale",     null: false
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.string   "name",       limit: 255
+    t.string   "name"
   end
 
   add_index "menu_translations", ["locale"], name: "index_menu_translations_on_locale"
   add_index "menu_translations", ["menu_id"], name: "index_menu_translations_on_menu_id"
 
   create_table "menus", force: :cascade do |t|
-    t.string   "name",         limit: 255
-    t.string   "category",     limit: 255
-    t.string   "subcategory",  limit: 255
-    t.string   "tag",          limit: 255
-    t.string   "default",      limit: 255
+    t.string   "category"
+    t.string   "subcategory"
+    t.string   "tag"
+    t.string   "default"
     t.integer  "price"
-    t.string   "option",       limit: 255
+    t.string   "option"
     t.integer  "option_price"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.string   "image",        limit: 255
+    t.string   "image"
   end
 
   create_table "posts", force: :cascade do |t|
     t.string   "title"
     t.string   "summary"
     t.string   "content"
+    t.string   "thumbnail"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
   create_table "quotes", force: :cascade do |t|
-    t.string   "name",       limit: 255
+    t.string   "name"
     t.text     "content"
-    t.string   "book",       limit: 255
+    t.string   "book"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
