@@ -1,9 +1,11 @@
-<li class="blog-post">
-	<div class="post-thumbnail">
-		<%= image_tag post.thumbnail %>
-	</div>
-	<div class="post-detail">
-		<h3><%= post.title %></h3>
-		<span><%= post.created_at.strftime("%F") %></span>
-	</div>
-</li>
+<a href="<%= url_for :controller => 'post', :action => 'show', :title => post.parameterized_title  %>">
+	<li class="blog-post">
+		<div class="post-thumbnail">
+			<%= image_tag post.thumbnail %>
+		</div>
+		<div class="post-detail">
+			<h3><%= post.title %></h3>
+			<span><%= post.created_at.strftime("%F") %></span>
+		</div>
+	</li>
+</a>

@@ -4,7 +4,7 @@ class PostController < ApplicationController
 		@posts_length = @posts.length
 	end
 
-	def read
+	def show
 		@post = Post.find_by_parameterized_title(params['title'])
 	end
 end
