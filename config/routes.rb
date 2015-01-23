@@ -6,9 +6,10 @@ Yeondoo::Application.routes.draw do
   root 'home#index'
   get 'privacy' => 'home#privacy'
   get 'menu'    => 'home#menu'
-  get 'blog'    => 'home#blog'
   get '/sitemap.xml'  => 'home#sitemap'
   get 'staffs'  => 'home#staffs'
+  get 'blog'    => 'post#list'
+  get 'blog/:title' => 'post#show'
 
   # Example of named route that can be invoked with purchase_url(id: product.id)
   #   get 'products/:id/purchase' => 'catalog#purchase', as: :purchase

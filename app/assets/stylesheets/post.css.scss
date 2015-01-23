@@ -1,0 +1,27 @@
+// Place all the styles related to the post controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.post-wrapper {
+	padding: 20px;
+
+	a {
+		color: #666;
+	}
+
+	.post-thumbnail {
+		text-align: center;
+	}
+
+	.blog-post {
+		padding: 10px 0;
+
+		.post-detail {
+			text-align: center;
+
+			span {
+				font-size: 0.8em;
+			}
+		}
+	}
+}

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150120135659) do
+ActiveRecord::Schema.define(version: 20150123013659) do
 
   create_table "menu_translations", force: :cascade do |t|
     t.integer  "menu_id",    null: false
@@ -35,6 +35,16 @@ ActiveRecord::Schema.define(version: 20150120135659) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "image"
+  end
+
+  create_table "posts", force: :cascade do |t|
+    t.string   "title"
+    t.string   "parameterized_title"
+    t.string   "summary"
+    t.string   "content"
+    t.string   "thumbnail"
+    t.datetime "created_at",          null: false
+    t.datetime "updated_at",          null: false
   end
 
   create_table "quotes", force: :cascade do |t|

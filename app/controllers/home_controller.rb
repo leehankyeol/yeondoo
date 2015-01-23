@@ -35,9 +35,6 @@ class HomeController < ApplicationController
   def privacy
   end
 
-  def blog
-  end
-
   def menu
     menus = Menu.all
     @deliveries = []
