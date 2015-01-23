@@ -1,0 +1,12 @@
+<div class="post-wrapper">
+	<div class="post-read">
+		<h2><%= @post.title %></h2>
+		<hr>
+		<div class="post-thumbnail">
+			<%= image_tag(@post.thumbnail) %>
+		</div>
+		<div class="post-content">
+			<%= simple_format(@post.content) %>
+		</div>
+	</div>
+</div>
