@@ -43,20 +43,22 @@
 <hr>
 <% if @posts.length > 0 %>
 	<% @posts.each do |post| %>
-		<% if post['type'] === 'photo' %>
-			<div class="fb-post">
-				<div class="fb-post-date">
-					<%= Date.strptime(post['created_time']).strftime("%F") %>
-				</div>
-				<div class="fb-post-image">
-					<img src="https://graph.facebook.com/<%= post['object_id'] %>/picture">
-				</div>
-				<div class="fb-post-message">
-					<%= auto_link(simple_format(post['message']), :link => :urls, :html => { :target => '_blank' }) %>
-				</div>
+		<div class="fb-post">
+			<div class="fb-post-date">
+				<%= Date.strptime(post['created_time']).strftime("%F") %>
 			</div>
-			<hr>
+		<% if post['type'] === 'photo' %>
+			<div class="fb-post-image">
+				<img src="https://graph.facebook.com/<%= post['object_id'] %>/picture">
+			</div>
+		<% elsif post['type'] === 'link' %>
+			<!-- TODO: Show something -->
 		<% end %>
+			<div class="fb-post-message">
+				<%= auto_link(simple_format(post['message']), :link => :urls, :html => { :target => '_blank' }) %>
+			</div>
+		</div>
+		<hr>
 	<% end %>
 <% else %>
 	<div class="no-photos">

@@ -8,7 +8,7 @@ class HomeController < ApplicationController
     @posts = []
 
     if !Rails.application.secrets.facebook_page_token.blank?
-      url = URI.parse('https://graph.facebook.com/v2.2/ydcoffee/posts?fields=message,object_id,type&limit=20&access_token='+URI.encode(Rails.application.secrets.facebook_page_token))
+      url = URI.parse('https://graph.facebook.com/v2.2/ydcoffee/posts?type=photo,link&fields=message,object_id,type,link&limit=20&access_token='+URI.encode(Rails.application.secrets.facebook_page_token))
       http = Net::HTTP.new(url.host, url.port)
       http.use_ssl = true
       http.verify_mode = OpenSSL::SSL::VERIFY_NONE
@@ -20,7 +20,7 @@ class HomeController < ApplicationController
         @posts = []
         number_of_posts = 0;
         raw_posts.each do |post|
-          if post['type'] === 'photo'
+          if post['type'] === 'photo' || post['type'] === 'link'
             @posts.push(post)
             number_of_posts += 1
             if number_of_posts == max_number_of_posts then
