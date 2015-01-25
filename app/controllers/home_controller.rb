@@ -2,9 +2,9 @@ require 'net/http'
 require 'time'
 
 class HomeController < ApplicationController
+  MAX_NUMBER_OF_POSTS = 5;
 
   def index
-    max_number_of_posts = 5;
     @posts = []
 
     if !Rails.application.secrets.facebook_page_token.blank?
@@ -23,7 +23,7 @@ class HomeController < ApplicationController
           if post['type'] === 'photo' || post['type'] === 'link'
             @posts.push(post)
             number_of_posts += 1
-            if number_of_posts == max_number_of_posts then
+            if number_of_posts === MAX_NUMBER_OF_POSTS then
               break
             end
           end
