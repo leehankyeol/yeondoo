@@ -8,7 +8,7 @@ class HomeController < ApplicationController
     @posts = []
 
     if !Rails.application.secrets.facebook_page_token.blank?
-      url = URI.parse('https://graph.facebook.com/v2.2/ydcoffee/posts?type=photo,link&fields=message,object_id,type,link&limit=20&access_token='+URI.encode(Rails.application.secrets.facebook_page_token))
+      url = URI.parse('https://graph.facebook.com/v2.2/ydcoffee/posts?type=photo,link&fields=message,object_id,type,full_picture&limit=20&access_token='+URI.encode(Rails.application.secrets.facebook_page_token))
       http = Net::HTTP.new(url.host, url.port)
       http.use_ssl = true
       http.verify_mode = OpenSSL::SSL::VERIFY_NONE

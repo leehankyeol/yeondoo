@@ -47,13 +47,13 @@
 			<div class="fb-post-date">
 				<%= Date.strptime(post['created_time']).strftime("%F") %>
 			</div>
-		<% if post['type'] === 'photo' %>
 			<div class="fb-post-image">
+			<% if post['type'] === 'photo' %>
 				<img src="https://graph.facebook.com/<%= post['object_id'] %>/picture">
+			<% elsif post['type'] === 'link' %>
+				<img src="<%= post['full_picture'] %>">
+			<% end %>
 			</div>
-		<% elsif post['type'] === 'link' %>
-			<!-- TODO: Show something -->
-		<% end %>
 			<div class="fb-post-message">
 				<%= auto_link(simple_format(post['message']), :link => :urls, :html => { :target => '_blank' }) %>
 			</div>
