@@ -236,9 +236,9 @@ park_seonghye = Staff.create(photo: 'seonghye.jpg', facebook_id: '10000182159193
 park_seonghye.translations.create(name: '박성혜', description: '"행복은 사실 늘 곁에 있는 거였지? 봄 낮 막걸리 캬!"', :locale => 'ko')
 park_seonghye.translations.create(name: 'Park Seonghye', description: '"Spring, daylight, Makgolee, I\'m happy"', :locale => 'en')
 
-# lee_sangeon = Staff.create(photo: 'dummy_profile.jpg', facebook_id: 'remeberthefithofnovember')
-# lee_sangeon.translations.create(name: '이상언', description: '"와인에 올리브를 먹는 삶이란."', :locale => 'ko')
-# lee_sangeon.translations.create(name: 'Lee Sangeon', description: '"What a life with olives and wine"', :locale => 'en')
+lee_sangeon = Staff.create(photo: 'sangeon.jpg', facebook_id: 'remeberthefithofnovember')
+lee_sangeon.translations.create(name: '이상언', description: '"와인에 올리브를 먹는 삶이란."', :locale => 'ko')
+lee_sangeon.translations.create(name: 'Lee Sangeon', description: '"What a life with olives and wine"', :locale => 'en')
 
 Post.create(title: 'Lorem Ipsum', parameterized_title: 'lorem-ipsum-1', summary: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum vitae tortor metus. Proin tempus ex et ultrices sollicitudin. Vivamus elementum quis nisi ut gravida.', content: 'Donec porta gravida tincidunt. Praesent a eleifend turpis. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec porttitor, neque non fermentum blandit, nibh nibh tempor nisi, at mattis libero tortor vitae purus. Sed a leo erat. Fusce fringilla, sem ac rhoncus pellentesque, mauris nisi mattis metus, sed tristique mi leo vitae lectus. Pellentesque eu diam quis purus dapibus consequat. Vivamus ullamcorper tellus non nunc sodales, eu molestie est tempus. Vestibulum vitae nisi sed erat pulvinar ultrices sit amet ut lorem. Aliquam quis efficitur nunc, vel commodo nisi. Vestibulum in lorem id eros rutrum varius. Etiam at justo venenatis, semper nulla sed, egestas mauris. Pellentesque laoreet, quam in laoreet tincidunt, libero ligula vulputate sapien, non bibendum nunc turpis ut orci. Pellentesque pharetra gravida gravida. Etiam enim magna, viverra ut leo et, tristique vehicula nibh.', thumbnail: 'dummy.jpg')
 
