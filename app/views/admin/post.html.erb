@@ -1,0 +1,36 @@
+<%= form_tag session_create_path do %>
+  <div class="form-group">
+    <label for="title">Title</label>
+    <input type="text" class="form-control" id="title" placeholder="Title" value="<%= @post.title %>">
+  </div>
+  <div class="form-group">
+    <label for="summary">Summary</label>
+    <textarea name="summary" class="form-control"><%= @post.summary %></textarea>
+  </div>
+  <div class="form-group">
+    <label for="content">Content</label>
+    <textarea name="content" class="form-control"><%= @post.content %></textarea>
+  </div>
+  <button type="submit" class="btn btn-default">Submit</button>
+<% end %>
+
+<% if @post.thumbnail %>
+<%= form_tag 'post/removeThumbnail' do %>
+<div class="form-group">
+  <label for="thumbnail">Thumbnail</label>
+  <img src="<%= asset_path('posts/'+@post.id.to_s+'/thumbnail/'+@post.thumbnail) %>">
+  <a class="btn btn-default" href="/post/removeThumbnail/<%= @post.id %>">Remove</a>
+</div>
+<% end %>
+<% else %>
+<%= form_tag({action: 'addThumbnail', controller: 'post'}, multipart: true) do %>
+<% if !@post.nil? %>
+<input type="hidden" name="id" value="<%= @post.id %>" />
+<% end %>
+<div class="form-group">
+  <label for="thumbnail">Thumbnail</label>
+  <input type="file" name="thumbnail" id="thumbnail">
+  <button type="submit" class="btn btn-default">Add</button>
+  <% end %>
+</div>
+<% end %>
