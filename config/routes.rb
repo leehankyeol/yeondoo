@@ -4,12 +4,16 @@ Yeondoo::Application.routes.draw do
 
   # You can have the root of your site routed with "root"
   root 'home#index'
-  get 'privacy' => 'home#privacy'
-  get 'menu'    => 'menu#list'
+  get 'privacy'       => 'home#privacy'
+  get 'menu'          => 'menu#list'
   get '/sitemap.xml'  => 'home#sitemap'
-  get 'staffs'  => 'staff#list'
-  get 'blog'    => 'post#list'
-  get 'blog/:title' => 'post#show'
+  get 'staffs'        => 'staff#list'
+  get 'blog'          => 'post#list'
+  get 'blog/:title'   => 'post#show'
+  get 'admin'         => 'admin#index'
+  get 'admin/login'   => 'admin#login'
+  post 'session/create' => 'session#create'
+  get 'session/destroy' => 'session#destroy'
 
   # Example of named route that can be invoked with purchase_url(id: product.id)
   #   get 'products/:id/purchase' => 'catalog#purchase', as: :purchase

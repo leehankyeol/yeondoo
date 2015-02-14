@@ -1,0 +1,11 @@
+<div class="col-lg-6 col-lg-offset-3 col-xs-12">
+  <%= form_tag session_create_path do %>
+
+    <div class="form-group">
+    <%= label_tag(:password, 'Password') %>
+    <%= password_field_tag(:password, nil, class: 'form-control', placeholder: 'Do you even lift?') %>
+    </div>
+
+    <%= submit_tag('Log in', class: 'btn btn-default') %>
+  <% end %>
+</div>
