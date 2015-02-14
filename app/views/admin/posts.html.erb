@@ -1,3 +1,5 @@
+<a href="/post/create" class="btn btn-default">Create a post</a>
+
 <table class="table">
   <thead>
     <tr>
@@ -9,7 +11,7 @@
     <% @posts.each do |post| %>
     <tr>
       <td><%= post.id %></td>
-      <td><a href="post/<%= post.id %>"><%= post.title %></a></td>
+      <td><a href="/post/edit/<%= post.id %>"><%= post.title %></a></td>
     </tr>
     <% end %>
   </tbody>

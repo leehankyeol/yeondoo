@@ -16,10 +16,6 @@ class AdminController < ApplicationController
     @posts = Post.all
   end
 
-  def post
-    @post = Post.find(params[:id])
-  end
-
   def login
 
   end
