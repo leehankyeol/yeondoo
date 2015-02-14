@@ -12,12 +12,25 @@
 	.blog-post {
 		padding: 10px 0;
 
-		.post-detail {
-			text-align: center;
+	}
 
-			span {
-				font-size: 0.8em;
-			}
+	.post-detail {
+		text-align: center;
+
+		p {
+			margin: 1em 0;
+			line-height: 1.5em;
+		}
+	}
+		
+	.post-date {
+		font-size: 0.8em;
+	}
+
+	.post-content {
+		p {
+			margin: 1em 0;
+			line-height: 1.5em;
 		}
 	}
 }

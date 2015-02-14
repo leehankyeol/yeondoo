@@ -5,6 +5,10 @@
     <input type="text" class="form-control" name="title" id="title" value="<%= @post.title %>">
   </div>
   <div class="form-group">
+    <label for="pTitle">Parameterized Title</label>
+    <input type="text" class="form-control" name="pTitle" id="pTitle" value="<%= @post.parameterized_title %>">
+  </div>
+  <div class="form-group">
     <label for="summary">Summary</label>
     <textarea name="summary" class="form-control"><%= @post.summary %></textarea>
   </div>

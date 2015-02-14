@@ -1,11 +1,14 @@
 <a href="<%= url_for :controller => 'post', :action => 'show', :title => post.parameterized_title  %>">
 	<li class="blog-post">
+    <% if !post.thumbnail.nil? %>
 		<div class="post-thumbnail">
 			<%= image_tag post.thumbnail %>
 		</div>
+    <% end %>
 		<div class="post-detail">
 			<h3><%= post.title %></h3>
-			<span><%= post.created_at.strftime("%F") %></span>
+			<span class="post-date"><%= post.created_at.strftime("%F") %></span>
+      <%= simple_format(post.summary) %>
 		</div>
 	</li>
 </a>

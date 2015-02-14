@@ -1,10 +1,14 @@
 <div class="post-wrapper">
 	<div class="post-read">
-		<h2><%= @post.title %></h2>
-		<hr>
+		<div class="post-detail">
+			<h2><%= @post.title %></h2>
+			<span class="post-date"><%= @post.created_at.strftime("%F") %></span>
+		</div>
+		<% if !@post.thumbnail.nil? %>
 		<div class="post-thumbnail">
 			<%= image_tag(@post.thumbnail) %>
 		</div>
+		<% end %>
 		<div class="post-content">
 			<%= simple_format(@post.content) %>
 		</div>

@@ -25,6 +25,7 @@ class PostController < ApplicationController
     if session[:isAdmin]
       id = params[:id]
       content = params[:content]
+      pTitle = params[:pTitle]
       summary = params[:summary]
       title = params[:title]
       post = nil
@@ -35,18 +36,15 @@ class PostController < ApplicationController
         if post.nil?
           redirect_to '/post/edit/'+post.id
         end
-        post.content = content
-        post.summary = summary
-        post.title = title
-        post.save
       else
         # create
         post = Post.new
-        post.content = content
-        post.summary = summary
-        post.title = title
-        post.save
       end
+      post.parameterized_title = pTitle
+      post.content = content
+      post.summary = summary
+      post.title = title
+      post.save
       redirect_to '/post/edit/'+post.id.to_s
     end
   end
