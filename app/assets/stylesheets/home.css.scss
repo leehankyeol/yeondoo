@@ -362,3 +362,31 @@ small screens.
 .menu-link span:after {
     margin-top: 0.6em;
 }
+
+.kakao {
+    text-align: center;
+    border: 1px solid #ddd;
+    height: 80px;
+    margin: 0 2em;
+    overflow: hidden;
+
+    @media screen and (min-width: 800px) {
+        visibility: none;
+        display: none;
+    }
+
+    .kakao-link-btn {
+        float: left;
+        width: 80px;
+
+        img {
+            width: 100%;
+        }
+    }
+
+    .kakao-link-title {
+        float: right;
+        width: calc(100% - 80px);
+        padding: 32px 0;
+    }
+}

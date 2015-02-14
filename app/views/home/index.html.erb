@@ -35,6 +35,29 @@
 // }
 </script>
 
+<div class="kakao" id="kakao-link-btn">
+	<div class="kakao-link-btn">
+	  <img src="http://dn.api1.kage.kakao.co.kr/14/dn/btqa9B90G1b/GESkkYjKCwJdYOkLvIBKZ0/o.jpg" />
+	</div>
+	<div class="kakao-link-title">
+		카카오톡으로 지도 공유하기
+	</div>
+</div>
+
+<script>
+Kakao.init('3da271f26fe71dfcd90eb362ba8f0890');
+Kakao.Link.createTalkLinkButton({
+  container: '#kakao-link-btn',
+  label: "[다음 지도] 연두 서울 종로구 화동 138-6 02-736-5001\nhttp://m.map.daum.net/place?confirmid=11100300\n
+  [네이버 지도] 연두 서울 종로구 화동 138-6 02-736-5001\nhttp://me2.do/GkFUDLeA",
+  image: {
+    src: 'http://yeondoo.kr/assets/open.jpg',
+    width: '800',
+    height: '489'
+  }
+});
+</script>
+
 <!-- <fb:login-button scope="public_profile,email" onlogin="checkLoginState();">
 </fb:login-button> -->
 <div class="fb-posts-wrapper">
