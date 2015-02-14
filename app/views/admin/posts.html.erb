@@ -1,3 +1,4 @@
+<!-- TODO: update href -->
 <a href="/post/create" class="btn btn-default">Create a post</a>
 
 <table class="table">
@@ -11,6 +12,7 @@
     <% @posts.each do |post| %>
     <tr>
       <td><%= post.id %></td>
+      <!-- TODO: update href -->
       <td><a href="/post/edit/<%= post.id %>"><%= post.title %></a></td>
     </tr>
     <% end %>

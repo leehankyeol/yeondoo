@@ -21,6 +21,7 @@
 
 <% if !@post.id.nil? %>
   <% if @post.thumbnail %>
+  <!-- TODO: update target -->
   <%= form_tag 'post/removeThumbnail' do %>
   <div class="form-group">
     <label for="thumbnail">Thumbnail</label>

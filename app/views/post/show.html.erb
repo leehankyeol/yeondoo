@@ -1,3 +1,7 @@
+<% title @post.title+' : ' +t('blog.title')+' : '+t('default_title') %>
+<% description @post.summary %>
+<% image @post.thumbnail.nil?? 'blog.jpg': '/posts/' + @post.id.to_s + '/thumbnail/' + @post.thumbnail %>
+
 <div class="post-wrapper">
 	<div class="post-read">
 		<div class="post-detail">
