@@ -7,11 +7,15 @@
 
 	.post-thumbnail {
 		text-align: center;
+		margin: 1em 0 0;
 	}
 
 	.blog-post {
 		padding: 10px 0;
 
+		.post-thumbnail {
+			margin: 0;
+		}
 	}
 
 	.post-detail {
