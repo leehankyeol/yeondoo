@@ -48,10 +48,9 @@
 Kakao.init('3da271f26fe71dfcd90eb362ba8f0890');
 Kakao.Link.createTalkLinkButton({
   container: '#kakao-link-btn',
-  label: "[다음 지도] 연두 서울 종로구 화동 138-6 02-736-5001\nhttp://m.map.daum.net/place?confirmid=11100300\n
-  [네이버 지도] 연두 서울 종로구 화동 138-6 02-736-5001\nhttp://me2.do/GkFUDLeA",
+  label: "[다음 지도] 연두 서울 종로구 화동 138-6 02-736-5001\nhttp://m.map.daum.net/place?confirmid=11100300\n[네이버 지도] 연두 서울 종로구 화동 138-6 02-736-5001\nhttp://me2.do/GkFUDLeA",
   image: {
-    src: 'http://yeondoo.kr/assets/open.jpg',
+    src: '<%= image_url 'open.jpg' %>',
     width: '800',
     height: '489'
   }
