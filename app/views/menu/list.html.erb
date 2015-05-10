@@ -14,7 +14,9 @@
 	<div class="menu-detail">
 		<ul>
 			<li><%= simple_format(t('menu.delivery_available.detail1')) %></li>
-			<li><%= simple_format(t('menu.delivery_available.detail2', :price_for_free_delivery => number_to_currency(@price_for_free_delivery, locale: :ko), :price_for_delivery => number_to_currency(@price_for_delivery, locale: :ko))) %></li>
+			<li><%= simple_format(t('menu.delivery_available.detail2',
+			:price_for_free_delivery => number_to_currency(@price_for_free_delivery, locale: :ko),
+			:price_for_delivery => number_to_currency(@price_for_delivery, locale: :ko))) %></li>
 			<li><%= simple_format(t('menu.delivery_available.detail3')) %></li>
 		</ul>
 	</div>
@@ -28,7 +30,8 @@
 	<div class="menu-detail">
 		<ul>
 			<li><%= simple_format(t('menu.handdrip_coffee.detail1')) %></li>
-			<li><%= simple_format(t('menu.handdrip_coffee.detail2', :price_for_additional_refill => number_to_currency(@price_for_additional_refill, locale: :ko))) %></li>
+			<li><%= simple_format(t('menu.handdrip_coffee.detail2',
+			:price_for_additional_iced_refill => number_to_currency(@price_for_additional_iced_refill, locale: :ko))) %></li>
 		</ul>
 	</div>
 
@@ -44,6 +47,19 @@
 		</ul>
 	</div>
 
+	<h3><%= t('menu.espresso.title') %></h3>
+	<ul class="menu-list">
+	<% @espressos.each do |menu| %>
+		<%= render partial: "menu/menu", locals: {menu: menu} %>
+	<% end %>
+	</ul>
+	<div class="menu-detail">
+		<ul>
+			<li><%= simple_format(t('menu.espresso.detail1')) %></li>
+			<li><%= simple_format(t('menu.espresso.detail2')) %></li>
+		</ul>
+	</div>	
+
 	<h3><%= t('menu.espresso_variations.title') %></h3>
 	<ul class="menu-list">
 	<% @espresso_variations.each do |menu| %>
@@ -53,23 +69,30 @@
 	<div class="menu-detail">
 		<ul>
 			<li><%= simple_format(t('menu.espresso_variations.detail1')) %></li>
+			<li><%= simple_format(t('menu.espresso_variations.detail2',
+			:price_for_additional_refill => number_to_currency(@price_for_additional_refill, locale: :ko))) %></li>
+			<li><%= simple_format(t('menu.espresso_variations.detail3',
+			:price_for_additional_iced_refill => number_to_currency(@price_for_additional_iced_refill, locale: :ko))) %></li>
 		</ul>
 	</div>
 
 	<h3><%= t('menu.tea.title') %></h3>
 	<ul class="menu-list">
-	<% @red_teas.each do |menu| %>
-		<%= render partial: "menu/menu", locals: {menu: menu} %>
-	<% end %>
-	<% @teas.each do |menu| %>
+	<% @rishis.each do |menu| %>
 		<%= render partial: "menu/menu", locals: {menu: menu} %>
 	<% end %>
 	</ul>
 	<div class="menu-detail">
 		<ul>
 			<li><%= simple_format(t('menu.tea.detail1')) %></li>
+			<li><%= simple_format(t('menu.tea.detail2')) %></li>
 		</ul>
 	</div>
+	<ul class="menu-list">
+	<% @teas.each do |menu| %>
+		<%= render partial: "menu/menu", locals: {menu: menu} %>
+	<% end %>
+	</ul>
 
 	<h3><%= t('menu.beverage.title') %></h3>
 	<ul class="menu-list">
@@ -77,6 +100,18 @@
 		<%= render partial: "menu/menu", locals: {menu: menu} %>
 	<% end %>
 	</ul>
+
+	<h3><%= t('menu.shaved_ice.title') %></h3>
+	<ul class="menu-list">
+	<% @shaved_ices.each do |menu| %>
+		<%= render partial: "menu/menu", locals: {menu: menu} %>
+	<% end %>
+	</ul>
+	<div class="menu-detail">
+		<ul>
+			<li><%= simple_format(t('menu.shaved_ice.detail1')) %></li>
+		</ul>
+	</div>
 
 	<h3><%= t('menu.wine.title') %></h3>
 	<ul class="menu-list">
@@ -90,7 +125,6 @@
 	<div class="menu-detail">
 		<ul>
 			<li><%= simple_format(t('menu.wine.detail1')) %></li>
-			<li><%= simple_format(t('menu.wine.detail2', :price_for_glass_wine => number_to_currency(@price_for_glass_wine, locale: :ko))) %></li>
 		</ul>
 	</div>
 
@@ -100,4 +134,9 @@
 		<%= render partial: "menu/menu", locals: {menu: menu} %>
 	<% end %>
 	</ul>
+	<div class="menu-detail">
+		<ul>
+			<li><%= simple_format(t('menu.side_menu.detail1')) %></li>
+		</ul>
+	</div>
 </div>

@@ -4,17 +4,19 @@ class MenuController < ApplicationController
     @deliveries = []
     @handdrip_coffees = []
     @dutch_coffees = []
+    @espressos = []
     @espresso_variations = []
-    @red_teas = []
+    @rishis = []
     @teas = []
     @beverages = []
+    @shaved_ices = []
     @mixed_wines = []
     @wines = []
     @sides = []
     @price_for_free_delivery = 40000
     @price_for_delivery = 3000
     @price_for_additional_refill = 2000
-    @price_for_glass_wine = 8000
+    @price_for_additional_iced_refill = 1000
 
     menus.each do |menu|
       if menu[:tag].split.include? 'delivery'
@@ -25,10 +27,12 @@ class MenuController < ApplicationController
             @handdrip_coffees.push(menu)
           when 'dutch'
             @dutch_coffees.push(menu)
+          when 'espresso'
+            @espressos.push(menu)
           when 'espresso variation'
             @espresso_variations.push(menu)
-          when 'red tea'
-            @red_teas.push(menu)
+          when 'rishi'
+            @rishis.push(menu)
           when 'mixed'
             @mixed_wines.push(menu)
           when ''
@@ -42,7 +46,11 @@ class MenuController < ApplicationController
             end
             case menu[:category]
               when 'sides'
-                @sides.push(menu)
+                if menu[:subcategory] == 'shaved_ice'
+                  @shaved_ices.push(menu)
+                else
+                  @sides.push(menu)
+                end
             end
         end
       end
