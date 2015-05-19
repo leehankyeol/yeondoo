@@ -32,25 +32,35 @@ en:
     handdrip_coffee:
       title: "Hand drip coffee"
       detail1: "1 free cup of hand drip coffee is offered for refill."
-      detail2: "%{price_for_additional_refill} is charged for each additional refill."
+      detail2: "%{price_for_additional_iced_refill} is additionally charged for iced refill."
     dutch_coffee:
       title: "Dutch coffee"
       detail1: "A bottle set consists of a bottle of dutch coffee and a paper box."
+    espresso:
+      title: "Espresso"
+      detail1: "If you order a cup of espresso, 1 free cup of espresso is offered for refill."
+      detail2: "Other than espresso, 1 free cup of espresso or hot americano is offered for refill."
     espresso_variations:
       title: "Espresso variations"
       detail1: "1 free cup of hot americano is offered for refill."
+      detail2: "%{price_for_additional_refill} is charged for each additional refill."
+      detail3: "%{price_for_additional_iced_refill} is additionally charged for iced americano."
     tea:
       title: "Tea"
-      detail1: "You might wonder what <a href=\"http://en.wikipedia.org/wiki/Omija_hwachae\">Omija</a> is."
+      detail1: "We offer Rishi Tea, the fair-trade, orgarnic farming brand."
+      detail2: "We use natural paper filters."
     beverage:
       title: "Beverage"
+    shaved_ice:
+      title: "Shaved ice"
+      detail1: "These are only offered in summertime."
     wine:
       title: "Wine"
       detail1: "We offer an extensive and ever-changing wine menu. Please contact us for more information."
-      detail2: "<span class=\"italic\">La Mision Cabernet Sauvignon</span> is also served with a glass at the price of %{price_for_glass_wine}."
     side_menu:
       title: "Side menu"
+      detail1: "Sausage plate includes ham, chorizo, and salami."
 
   staffs:
     title: "Staffs"
-    description: "Let us introduce us."
+    description: "Let us introduce ourselves."
