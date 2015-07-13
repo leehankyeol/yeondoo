@@ -9,6 +9,7 @@ The website of the best cafe, [Cafe Yeondoo](http://yeondoo.kr), in Samcheong-do
 3. Configure asset pipeline on production.
 4. Replace default token at `config/secrets.yml` with your own token.
 >production:
+>
 >  facebook_page_token: YOUR_FACEBOOK_TOKEN
 5. Restart Unicorn and nginx.
 6. Boom!
